@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./App.css"
 import Profile from "./PortfolioContainer/Home/Profile"
 
 class App extends Component {
