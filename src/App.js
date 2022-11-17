@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./App.css"
 import AboutMe from './PortfolioContainer/AboutMe/AboutMe';
+import ContantMe from './PortfolioContainer/ContactMe/ContantMe';
 import Home from "./PortfolioContainer/Home/Home"
 import Resume from './PortfolioContainer/Resume/Resume';
 
@@ -11,6 +12,7 @@ class App extends Component {
         <Home/>
         <AboutMe/>
         <Resume/>
+        <ContantMe/>
       </div>
     );
   }
