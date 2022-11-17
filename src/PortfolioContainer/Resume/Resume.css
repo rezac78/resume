@@ -28,3 +28,104 @@
         font-size: 12px;
         color: var(--black);
 }
+.resume-content .resume-card{
+        display: flex;
+        height: 360px;
+        width: 1000px;
+}
+.resume-card .resume-bullets{
+        box-shadow: 15px 0 9px -15px #1f2235;
+        height: 100%;
+        width: 320px;
+}
+.resume-card .resume-bullets .bullet-container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+}
+.resume-card .resume-bullets .bullet-container .bullet-icons{
+        width: 34px;
+        height: 100%;
+        z-index: 1;
+        background-color: #1f2235;
+        position: absolute;
+}
+.resume-card .resume-bullets .bullet-container .bullets{
+        width: 86%;
+        position: relative;
+        z-index: 2;
+}
+.bullets .bullet{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: #1f2235;
+        height: 40px;
+        margin: 15px 0;
+        padding: 0 8px;
+        border-radius: 20px;
+        width: 30px;
+        transition: width .6s ease;
+}
+.bullets .bullet .bullet-logo{
+        height: 18px;
+        margin: 0 30px 0 0;
+}
+.bullets .bullet .bullet-label{
+        font-size: 14px;
+        white-space: nowrap;
+        font-family: "Poppins SemiBold";
+}
+.resume-bullet-details{
+        flex-grow: 1;
+        width: 600px;
+        overflow: hidden;
+        padding: 0 0 0 80px;
+}
+.resume-details-carousal{
+        transform: translateY(0px);
+}
+.resume-screen-container{
+        display: flex;
+         flex-direction: column;
+        justify-content: space-evenly;
+        height: 360px;
+        width: 100%;
+}
+.resume-heading{
+        display: flex;
+        flex-direction: column;
+}
+.resume-main-heading{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+}
+.heading-bullet{
+        position: absolute;
+        left: -30px;
+        height: 15px;
+        width: 15px;
+        top: 5px;
+        border-radius: 50%;
+        background-color: #ff5823;
+}
+.heading-date{
+        background-color: #ff5823;
+        padding: 4px 12px;
+        font-size: 14px;
+        border-radius: 14px;
+        color: var(--white);
+}
+.resume-sub-heading{
+        font-size: 14px;
+        font-family: "Poppins SemiBold";
+        color: var(--black);
+        margin: 10px 0 0;
+}
+.resume-heading-description{
+        font-size: 12px;
+        text-align: justify;
+}
