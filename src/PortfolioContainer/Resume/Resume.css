@@ -69,6 +69,23 @@
         width: 30px;
         transition: width .6s ease;
 }
+.selected{
+        animation: phone 1s ease-in-out  infinite;
+        animation-iteration-count: 2;
+        color: #ff5823;
+}
+@keyframes phone {
+        0%,30%,60%,90%, 100% {
+         transform: translateX(-21deg);
+        }
+        50% {
+         transform: rotate(21deg);
+        }
+       }
+
+.selected-bullet-contact{
+        display: none;
+}
 .bullets .bullet .bullet-logo{
         height: 18px;
         margin: 0 30px 0 0;
@@ -128,4 +145,56 @@
 .resume-heading-description{
         font-size: 12px;
         text-align: justify;
+}
+.experience-description{
+        max-width: 100%;
+        margin: 10px 0 0;
+        text-align: justify;
+}
+.resume-description-text{
+        font-size: 12px;    
+}
+.programming-skills-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+}
+.skill-parent {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 50%;
+}
+.skill-parent .heading-bullet{
+        position: absolute;
+        left: -30px;
+        height: 15px;
+        width: 15px;
+        top: 5px;
+        border-radius: 50%;
+        background-color: #ff5823;
+}
+.skill-parent span {
+        font-family: "Poppins Bold";
+        font-size: 16px;
+        color: #ff5823;
+}
+.skill-percentage {
+        position: relative;
+        height: 15px;
+        width: 70%;
+        background-color: #ff5823;
+}
+.active-percentage-bar{
+        height: 15px;
+        transition: .8s ease;
+        position: absolute;
+        background-color: #1f2235;
+}
+.resume-main-heading span{
+        color: var(--dark-orange);
+        font-size: 16px;
+        font-family: "Poppins SemiBold";
 }
