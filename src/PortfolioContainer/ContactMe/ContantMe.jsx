@@ -4,7 +4,7 @@ import Mailz from '../../assets/Home/mailz.jpeg'
 export default function ContantMe() {
         return (
                 <div>
-                        <div className="main-container">
+                        <div className="main-container" id="ContactMe">
                                 <div className="heading-container">
                                         <div className="screen-heading">
                                                 <span>Contact Me</span>
@@ -62,7 +62,9 @@ export default function ContantMe() {
                                 </div>
                         </div>
                         <div className="scroll-container">
-                                <button className="btn-scroll">
+                                <button onClick={() => {
+                                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                                }} className="btn-scroll">
                                         <i className="fa fa-arrow-up"></i>
                                 </button>
                         </div>

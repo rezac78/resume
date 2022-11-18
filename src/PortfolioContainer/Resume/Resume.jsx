@@ -7,7 +7,7 @@ import Projects from "../../assets/Home/Projects.svg"
 import Interests from "../../assets/Home/Interests.svg"
 export default function Resume() {
         return (
-                <div className="resume-container">
+                <div className="resume-container" id="Resume">
                         <div className="resume-content">
                                 <div className="heading-container">
                                         <div className="screen-heading">

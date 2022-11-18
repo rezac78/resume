@@ -9,19 +9,26 @@ export default function Header() {
                 setOpen(!isOpen)
                 console.log(isOpen)
         }
+        const values = [
+                { id: 1, name: "Home", Link: "#" },
+                { id: 2, name: "AboutMe", Link: "#AboutMe" },
+                { id: 3, name: "Resume", Link: "#Resume" },
+                { id: 4, name: "ContactMe", Link: "#ContactMe" }
+        ];
+        const [activeId, setActiveId] = useState(1);
         return (
                 <div isOpen={isOpen}
                         onOpen={handleIsOpen}
                         onClose={handleIsOpen} className="navbar">
                         {
                                 isOpen === true ?
-                                        <div>
+                                        <div >
                                                 <div className="nav-links">
                                                         <ul>
-                                                                <li className="active"><a href="#" >Home</a></li>
-                                                                <li><a href="#">AboutMe</a></li>
-                                                                <li><a href="#">Resume</a></li>
-                                                                <li><a href="#">ContactMe</a></li>
+                                                                <li><a href="#" >Home</a></li>
+                                                                <li><a href="#AboutMe">AboutMe</a></li>
+                                                                <li><a href="#Resume">Resume</a></li>
+                                                                <li><a href="#ContactMe">ContactMe</a></li>
                                                         </ul>
                                                 </div>
                                                 <div onClick={handleIsOpen}>
@@ -33,10 +40,11 @@ export default function Header() {
                                         <div>
                                                 <div className="nav-links-PC">
                                                         <ul>
-                                                                <li className="active"><a href="#" >Home</a></li>
-                                                                <li><a href="#">AboutMe</a></li>
-                                                                <li><a href="#">Resume</a></li>
-                                                                <li><a href="#">ContactMe</a></li>
+                                                                {values.map((val) => (
+                                                                        <li onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
+                                                                                <a href={val.Link} >{val.name}</a>
+                                                                        </li>
+                                                                ))}
                                                         </ul>
                                                 </div>
                                                 <div onClick={handleIsOpen}>
