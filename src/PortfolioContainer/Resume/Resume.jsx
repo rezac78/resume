@@ -136,52 +136,42 @@ export default function Resume() {
                                                 <div className={toggleState === 3 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className="resume-screen-container programming-skills-container">
                                                                 <div className="skill-parent">
-                                                                        <div className="heading-bullet"></div>
                                                                         <span>JavaScript</span>
                                                                         <div className="skill-percentage">
                                                                                 <div className="active-percentage-bar" style={{ width: "85%" }}>
-
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                                 <div className="skill-parent">
-                                                                        <div className="heading-bullet"></div>
                                                                         <span>React JS</span>
                                                                         <div className="skill-percentage">
                                                                                 <div className="active-percentage-bar" style={{ width: "80%" }}>
-
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                                 <div className="skill-parent">
-                                                                        <div className="heading-bullet"></div>
                                                                         <span>React Native</span>
                                                                         <div className="skill-percentage">
                                                                                 <div className="active-percentage-bar" style={{ width: "65%" }}>
-
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                                 <div className="skill-parent">
-                                                                        <div className="heading-bullet"></div>
                                                                         <span>Express JS</span>
                                                                         <div className="skill-percentage">
                                                                                 <div className="active-percentage-bar" style={{ width: "45%" }}>
-
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                                 <div className="skill-parent">
-                                                                        <div className="heading-bullet"></div>
                                                                         <span>Mongo Db</span>
                                                                         <div className="skill-percentage">
                                                                                 <div className="active-percentage-bar" style={{ width: "95%" }}>
-
                                                                                 </div>
                                                                         </div>
                                                                 </div>
                                                                 <div className="skill-parent">
-                                                                        <div className="heading-bullet"></div>
+
                                                                         <span>Node JS</span>
                                                                         <div className="skill-percentage">
                                                                                 <div className="active-percentage-bar" style={{ width: "55%" }}>

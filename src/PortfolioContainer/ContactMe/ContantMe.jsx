@@ -23,42 +23,42 @@ export default function ContantMe() {
                                         <div className="col">
                                                 <h2 className="title">
                                                         <p className="styles_typicalWrapper__1_Uvh">Get In Touch 📧</p>
-                                                        <a href="https://github.com/rezac78">
-                                                                <i className="fa fa-facebook-square"></i>
-                                                        </a>
-                                                        <a href="https://github.com/rezac78">
-                                                                <i className="fa fa-google-plus-square"></i>
-                                                        </a>
-                                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/">
-                                                                <i className="fa fa-instagram-square"></i>
-                                                        </a>
-                                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/">
-                                                                <i className="fa fa-youtube-square"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                                <i className="fa fa-twitter-square"></i>
-                                                        </a>
                                                 </h2>
+                                                <a href="https://github.com/rezac78">
+                                                        <i className="fa fa-facebook-square"></i>
+                                                </a>
+                                                <a href="https://github.com/rezac78">
+                                                        <i className="fa fa-google-plus-square"></i>
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/">
+                                                        <i className="fa fa-instagram-square"></i>
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/">
+                                                        <i className="fa fa-youtube-square"></i>
+                                                </a>
+                                                <a href="#">
+                                                        <i className="fa fa-twitter-square"></i>
+                                                </a>
                                         </div>
                                         <div className="back-form">
                                                 <div className="img-back">
                                                         <h4>Send Your Email Here!</h4>
                                                         <img src={Mailz} alt="cover not found" />
                                                 </div>
+                                                <form>
+                                                        <p></p>
+                                                        <label for="name">Name</label>
+                                                        <input type="text" />
+                                                        <label for="email">Email</label>
+                                                        <input type="email" />
+                                                        <label for="message">Message</label>
+                                                        <textarea type="text"  ></textarea>
+                                                        <div className="send-btn">
+                                                                <button type="submit">send</button>
+                                                                <i className="fa fa-paper-plane"></i>
+                                                        </div>
+                                                </form>
                                         </div>
-                                        <form>
-                                                <p></p>
-                                                <label for="name">Name</label>
-                                                <input type="text" value />
-                                                <label for="email">Email</label>
-                                                <input type="email" value />
-                                                <label for="message">Message</label>
-                                                <textarea type="text" value ></textarea>
-                                                <div className="send-btn">
-                                                        <button type="submit">send</button>
-                                                        <i className="fa fa-paper-plane"></i>
-                                                </div>
-                                        </form>
                                 </div>
                         </div>
                         <div className="scroll-container">
