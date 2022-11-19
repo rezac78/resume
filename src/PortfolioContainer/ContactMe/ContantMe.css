@@ -164,9 +164,21 @@ button .load img {
                 align-self: center;
                 margin-right: 20px;
         }
-
         form {
                 flex: 0.9;
+        }
+}
+@media screen and (max-width: 940px){
+        .central-form {
+                display: grid;
+        }
+}
+@media screen and (max-width: 370px){
+        .central-form {
+                display: grid;
+        }
+        .back-form .img-back h4 {
+                font-size: 12px;
         }
 }
 @media screen and (max-width: 414px) {
