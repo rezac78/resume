@@ -93,6 +93,7 @@
 .selected-bullet-contact{
   display: none;
 }
+
 .bullets .bullet .bullet-logo{
   height: 18px;
   margin: 0 30px 0 0;
@@ -110,6 +111,15 @@
 }
 .resume-details-carousal{
   transform: translateY(0px);
+  animation: 1s linear 0s alternate animating-multiple-properties;
+}
+@keyframes animating-multiple-properties {
+  from {
+    transform: translateY(30vh);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 .resume-screen-container{
   display: flex;

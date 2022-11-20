@@ -1,9 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import "./ContantMe.css"
 import Mailz from '../../assets/Home/mailz.jpeg'
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function ContantMe() {
+        useEffect(() => {
+                Aos.init({ duration: 2000 });
+        }, []);
         return (
-                <div className="main-container fade-in" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
+                <div data-aos="fade-up" className="main-container fade-in" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
                         <div className="heading-container">
                                 <div className="screen-heading"><span>Contact Me</span></div>
                                 <div className="screen-sub-heading"><span>Lets Keep In Touch</span></div>
@@ -29,8 +34,8 @@ export default function ContantMe() {
                                 </div>
                                 <div className="back-form">
                                         <div className="img-back">
-                                                <h4>Send Your Email Here!</h4><img src={Mailz}
-                                                        alt="image not found" />
+                                                <h4>Send Your Email Here!</h4>
+                                                <img src={Mailz} alt="image not found" />
                                         </div>
                                         <form>
                                                 <p></p>
@@ -43,7 +48,11 @@ export default function ContantMe() {
                                         </form>
                                 </div>
                         </div>
-                        <div className="scroll-container"><button className="btn-scroll"> <i className="fa fa-arrow-up"></i></button></div>
+                        <div className="scroll-container">
+                                <button onClick={() => {
+                                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                                }} className="btn-scroll"> <i className="fa fa-arrow-up"></i></button>
+                        </div>
                 </div>
         )
 }

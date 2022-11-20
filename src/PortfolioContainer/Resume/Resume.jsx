@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import "./Resume.css"
 import Education from "../../assets/Home/Education.svg"
 import History from "../../assets/Home/history.svg"
 import Programming from "../../assets/Home/Programming.svg"
 import Projects from "../../assets/Home/Projects.svg"
 import Interests from "../../assets/Home/Interests.svg"
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function Resume() {
         const [toggleState, setToggleState] = useState(1);
         const toggleTab = (index) => {
                 setToggleState(index);
         }
+        useEffect(() => {
+                Aos.init({ duration: 2000 });
+        }, []);
         return (
-                <div className="resume-container" id="Resume">
+                <div data-aos="fade-right" className="resume-container" id="Resume">
                         <div className="resume-content">
                                 <div className="heading-container">
                                         <div className="screen-heading">

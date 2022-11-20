@@ -121,7 +121,15 @@ form button:hover {
         transition: all ease 1s;
         border: 2px solid #1f2235;
 }
-      
+.styles_typicalWrapper__1_Uvh::after {
+        content: "|";
+        animation: blinker .8s linear infinite;
+}
+@keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+} 
 button .load {
         width: 100%;
 }
@@ -149,6 +157,22 @@ button .load img {
         background-color: tomato;
         border-radius: 10px;
         border: none;    
+}
+.fa-arrow-up{
+        animation: updown 3s ease infinite;
+}
+@keyframes updown {
+        0% {
+          transform: translateY(-20%);
+        }
+      
+        50% {
+          transform: translateY(30%);
+        }
+      
+        100% {
+          transform: translateY(-20%);
+        }
 }
 @media screen and (min-width: 940px) {
         .back-form {
