@@ -22,6 +22,24 @@
 .navbar .nav-links ul li{
         margin:0 35px;
 }
+.GlobalImg{
+        width: 18%;
+        background: white;
+        border-radius: 50%;
+}
+.dropdown .btn{
+        padding: 0;
+}
+.dropdown-toggle::after {
+        color: white;
+}
+.flagIcon{
+        width: 25%;
+}
+.dropdown-item{
+        display: flex;
+        justify-content: space-between;
+}
 .navbar .nav-links ul li.active a{
         color: #ed3c57;
         font-weight: 600;
@@ -80,5 +98,13 @@
         .navbar .nav-links ul li {
                 margin: 25px 0;
                 font-size:1.2em;
+        }
+        .dropdown_style{
+                margin: 0;
+        }
+}
+@media screen and (max-width: 920px){
+        .navbar .nav-links-PC ul li {
+                margin: 0 21px;
         }
 }

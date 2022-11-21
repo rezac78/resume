@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useTranslation } from "react-i18next";
 import "./Resume.css"
 import Education from "../../assets/Home/Education.svg"
 import History from "../../assets/Home/history.svg"
 import Programming from "../../assets/Home/Programming.svg"
 import Projects from "../../assets/Home/Projects.svg"
-import Interests from "../../assets/Home/Interests.svg"
 import Aos from "aos";
 import "aos/dist/aos.css";
 export default function Resume() {
@@ -15,15 +15,16 @@ export default function Resume() {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
         }, []);
+        const { t } = useTranslation();
         return (
                 <div data-aos="fade-right" className="resume-container" id="Resume">
                         <div className="resume-content">
                                 <div className="heading-container">
                                         <div className="screen-heading">
-                                                <span>Resume</span>
+                                                <span>{t("Resume")}</span>
                                         </div>
                                         <div className="screen-sub-heading">
-                                                <span>My formal Bio Details</span>
+                                                <span>{t("whyResume")}</span>
                                         </div>
                                         <div className="heading-seperator">
                                                 <div class="seperator-line"></div>
@@ -39,23 +40,19 @@ export default function Resume() {
                                                         <div className="bullets">
                                                                 <div className={toggleState === 1 ? "bullet selected" : " bullet"} onClick={() => toggleTab(1)}>
                                                                         <img className="bullet-logo" alt="B" src={Education} />
-                                                                        <span className="bullet-label">Education</span>
+                                                                        <span className="bullet-label">{t("Education")}</span>
                                                                 </div>
                                                                 <div className={toggleState === 2 ? "bullet selected" : " bullet"} onClick={() => toggleTab(2)}>
                                                                         <img className="bullet-logo" alt="B" src={History} />
-                                                                        <span className="bullet-label">Work History</span>
+                                                                        <span className="bullet-label">{t("WorkHistory")}</span>
                                                                 </div>
                                                                 <div className={toggleState === 3 ? "bullet selected" : " bullet"} onClick={() => toggleTab(3)}>
                                                                         <img className="bullet-logo" alt="B" src={Programming} />
-                                                                        <span className="bullet-label">Programming Skills</span>
+                                                                        <span className="bullet-label">{t("ProgrammingSkills")}</span>
                                                                 </div>
                                                                 <div className={toggleState === 4 ? "bullet selected" : " bullet"} onClick={() => toggleTab(4)}>
                                                                         <img className="bullet-logo" alt="B" src={Projects} />
-                                                                        <span className="bullet-label">Projects</span>
-                                                                </div>
-                                                                <div className={toggleState === 5 ? "bullet selected" : " bullet"} onClick={() => toggleTab(5)}>
-                                                                        <img className="bullet-logo" alt="B" src={Interests} />
-                                                                        <span className="bullet-label">Interests</span>
+                                                                        <span className="bullet-label">{t("Projects")}</span>
                                                                 </div>
                                                         </div>
                                                 </div>
@@ -66,17 +63,17 @@ export default function Resume() {
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
                                                                                 <div className="heading-bullet"></div>
-                                                                                <span>University of Legon Accra, Ghana</span>
-                                                                                <div className="heading-date">2014-2018</div>
+                                                                                <span>{t("HeaderEducation")}</span>
+                                                                                <div className="heading-date">{t("HeaderDate")}</div>
                                                                         </div>
                                                                         <div className="resume-sub-heading">
-                                                                                <span>BACHELOR OF SCIENCE INFORMATION TECHNOLOGY</span>
+                                                                                <span>{t("MainEducation")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
                                                                                 <span></span>
                                                                         </div>
                                                                 </div>
-                                                                <div className="resume-heading">
+                                                                {/* <div className="resume-heading">
                                                                         <div className="resume-main-heading">
                                                                                 <div className="heading-bullet"></div>
                                                                                 <span>National Youth Service Corps</span>
@@ -101,10 +98,9 @@ export default function Resume() {
                                                                         <div className="resume-heading-description">
                                                                                 <span></span>
                                                                         </div>
-                                                                </div>
+                                                                </div> */}
                                                                 <div className="experience-container">
                                                                         <div className="resume-heading">
-
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -115,25 +111,46 @@ export default function Resume() {
                                                                         <div className="resume-heading">
                                                                                 <div className="resume-main-heading">
                                                                                         <div className="heading-bullet"></div>
-                                                                                        <span>Ehizeex Technoloy</span>
-                                                                                        <div className="heading-date">2021-Present</div>
+                                                                                        <span>{t("HeaderWorkHistory")}</span>
+                                                                                        <div className="heading-date">{t("DateWorkHistory")}</div>
                                                                                 </div>
                                                                                 <div className="resume-sub-heading">
-                                                                                        <span>FULL STACK DEVELOPER INTERN</span>
+                                                                                        <span>{t("LocationWorkHistory")}</span>
                                                                                 </div>
                                                                                 <div className="resume-heading-description">
                                                                                         <span></span>
                                                                                 </div>
                                                                         </div>
-                                                                        <div className="experience-description">
-                                                                                <span className="resume-description-text">
-                                                                                        Currently working as MERN stack web and mobile developer and also an online instructor on udemy.
+                                                                        <div className="resume-sub-heading">
+                                                                                <span className="">
+                                                                                        {t("JobPosition")}
                                                                                 </span>
                                                                         </div>
                                                                         <div className="experience-description">
-                                                                                <span className="resume-description-text">
-                                                                                        - Developed an ecommerce website for client with the dashboard for managing the products, managing reviews, users, payment etc. .
+                                                                                <a href={t("linkWorkHistory")}>{t("HeaderWorkHistory")}</a>
+                                                                        </div>
+                                                                </div>
+                                                                <div className="experience-container">
+                                                                        <div className="resume-heading">
+                                                                                <div className="resume-main-heading">
+                                                                                        <div className="heading-bullet"></div>
+                                                                                        <span>{t("HeaderWorkHistory")}</span>
+                                                                                        <div className="heading-date">{t("DateWorkHistory")}</div>
+                                                                                </div>
+                                                                                <div className="resume-sub-heading">
+                                                                                        <span>{t("LocationWorkHistory")}</span>
+                                                                                </div>
+                                                                                <div className="resume-heading-description">
+                                                                                        <span></span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div className="resume-sub-heading">
+                                                                                <span className="">
+                                                                                        {t("JobPosition")}
                                                                                 </span>
+                                                                        </div>
+                                                                        <div className="experience-description">
+                                                                                <a href={t("linkWorkHistory")}>{t("HeaderWorkHistory")}</a>
                                                                         </div>
                                                                 </div>
                                                         </div>
@@ -191,83 +208,49 @@ export default function Resume() {
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
                                                                                 <div className="heading-bullet"></div>
-                                                                                <span>Personal Portfolio Website</span>
-                                                                                <div className="heading-date">2020-2021</div>
+                                                                                <span>{t("ProjectsTitle")}</span>
+                                                                                <div className="heading-date">{t("ProjectsDate")}</div>
                                                                         </div>
                                                                         <div className="resume-sub-heading">
-                                                                                <span>Technologies Used: React JS, Bootsrap</span>
+                                                                                <span>{t("ProjectsSkills")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
-                                                                                <span>A Personal Portfolio website to showcase all my details and projects at one place.</span>
+                                                                                <span>{t("ProjectsMain")}</span>
+                                                                        </div>
+                                                                        <div className="experience-description">
+                                                                                <a href={t("Projectslink")}>{t("ProjectsTitle")}</a>
                                                                         </div>
                                                                 </div>
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
                                                                                 <div className="heading-bullet"></div>
-                                                                                <span>Mobile E-shop </span>
-                                                                                <div className="heading-date">2020-2021</div>
+                                                                                <span>{t("ProjectsTitle")}</span>
+                                                                                <div className="heading-date">{t("ProjectsDate")}</div>
                                                                         </div>
                                                                         <div className="resume-sub-heading">
-                                                                                <span>Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.</span>
+                                                                                <span>{t("ProjectsSkills")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
-                                                                                <span>An ecommerce application designed to sell products online wth payment system integration</span>
+                                                                                <span>{t("ProjectsMain")}</span>
+                                                                        </div>
+                                                                        <div className="experience-description">
+                                                                                <a href={t("Projectslink")}>{t("ProjectsTitle")}</a>
                                                                         </div>
                                                                 </div>
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
                                                                                 <div className="heading-bullet"></div>
-                                                                                <span>Ecommerce Website </span>
-                                                                                <div className="heading-date">2020-2021</div>
+                                                                                <span>{t("ProjectsTitle")}</span>
+                                                                                <div className="heading-date">{t("ProjectsDate")}</div>
                                                                         </div>
                                                                         <div className="resume-sub-heading">
-                                                                                <span>Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.</span>
+                                                                                <span>{t("ProjectsSkills")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
-                                                                                <span>Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe</span>
+                                                                                <span>{t("ProjectsMain")}</span>
                                                                         </div>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div className={toggleState === 5 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className="resume-screen-container">
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
-                                                                                <span>Teaching</span>
-                                                                                <div></div>
-                                                                        </div>
-                                                                        <div className="resume-sub-heading">
-                                                                                <span></span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span>Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing.</span>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
-                                                                                <span>Music</span>
-                                                                                <div></div>
-                                                                        </div>
-                                                                        <div className="resume-sub-heading">
-                                                                                <span></span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span>Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing.</span>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
-                                                                                <span>Competitor</span>
-                                                                                <div></div>
-                                                                        </div>
-                                                                        <div className="resume-sub-heading">
-                                                                                <span></span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span>Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing.</span>
+                                                                        <div className="experience-description">
+                                                                                <a href={t("Projectslink")}>{t("ProjectsTitle")}</a>
                                                                         </div>
                                                                 </div>
                                                         </div>

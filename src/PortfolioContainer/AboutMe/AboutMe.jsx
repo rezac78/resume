@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from "react-i18next";
 import "./AboutMe.css"
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -6,15 +7,16 @@ export default function AboutMe() {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
         }, []);
+        const { t } = useTranslation();
         return (
                 <div data-aos="fade-up" className="about-me-container" id="AboutMe">
                         <div className="about-me-parent">
                                 <div className="heading-container">
                                         <div className="screen-heading">
-                                                <span>About Me</span>
+                                                <span> {t("AboutMe")}</span>
                                         </div>
                                         <div className="screen-sub-heading">
-                                                <span>why Choose Me?</span>
+                                                <span>{t("whyHierMy")}</span>
                                         </div>
                                         <div className="heading-seperator">
                                                 <div class="seperator-line"></div>
@@ -27,44 +29,40 @@ export default function AboutMe() {
                                         <div className="about-me-profile">
                                         </div>
                                         <div className="about-me-details">
-                                                <span class="about-me-description">Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.</span>
+                                                <span class="about-me-description">{t("Samaritan")}</span>
                                                 <div class="about-me-highlights">
                                                         <div class="highlight-heading">
-                                                                <span>Here are a Few Highlights:</span>
+                                                                <span>{t("HeaderHighlights")}</span>
                                                         </div>
                                                         <div class="highlight">
                                                                 <div class="highlight-blob"></div>
-                                                                <span>Full Stack web and mobile development</span>
+                                                                <span>{t("Highlights1")}</span>
                                                         </div>
                                                         <div class="highlight">
                                                                 <div class="highlight-blob"></div>
-                                                                <span>Interactive Front End as per the design</span>
+                                                                <span>{t("Highlights2")}</span>
                                                         </div>
                                                         <div class="highlight">
                                                                 <div class="highlight-blob"></div>
-                                                                <span>React and React Native</span>
+                                                                <span>{t("Highlights3")}</span>
                                                         </div>
                                                         <div class="highlight">
                                                                 <div class="highlight-blob"></div>
-                                                                <span>Redux for State Mnanagement</span>
+                                                                <span>{t("Highlights4")}</span>
                                                         </div>
                                                         <div class="highlight">
                                                                 <div class="highlight-blob"></div>
-                                                                <span>Building REST API</span>
-                                                        </div>
-                                                        <div class="highlight">
-                                                                <div class="highlight-blob"></div>
-                                                                <span>Managing database</span>
+                                                                <span>{t("Highlights5")}</span>
                                                         </div>
                                                 </div>
                                                 <div class="about-me-options">
                                                         <a href="#ContactMe">
                                                                 <button class="btn primary-btn">
-                                                                        Hire Me
+                                                                        {t("ContactMe")}
                                                                 </button>
                                                         </a>
                                                         <a href="RezaDalvandCV.pdf" download="RezaDalvandCV.pdf">
-                                                                <button className="btn highlighted-btn">Get Resume</button>
+                                                                <button className="btn highlighted-btn">{t("GetResume")}</button>
                                                         </a>
                                                 </div>
                                         </div>

@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import { useTranslation } from "react-i18next";
 import "./ContantMe.css"
 import Mailz from '../../assets/Home/mailz.jpeg'
 import Aos from "aos";
@@ -7,11 +8,12 @@ export default function ContantMe() {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
         }, []);
+        const { t } = useTranslation();
         return (
                 <div data-aos="fade-up" className="main-container fade-in" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
                         <div className="heading-container">
-                                <div className="screen-heading"><span>Contact Me</span></div>
-                                <div className="screen-sub-heading"><span>Lets Keep In Touch</span></div>
+                                <div className="screen-heading"><span>{t("ContactMe")}</span></div>
+                                <div className="screen-sub-heading"><span>{t("whyContactMe")}</span></div>
                                 <div className="heading-seperator">
                                         <div className="seperator-line"></div>
                                         <div className="seperator-blob">

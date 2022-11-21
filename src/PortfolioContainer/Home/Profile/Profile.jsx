@@ -1,7 +1,9 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter';
+import { useTranslation } from "react-i18next";
 import "./Profile.css"
 export default function Profile() {
+        const { t } = useTranslation();
         return (
                 <div className="profile-container">
                         <div className="profile-parent">
@@ -28,7 +30,7 @@ export default function Profile() {
                                         <div className="profile-details-name">
                                                 <span className="primary-text">
                                                         {" "}
-                                                        Hello, Im <span className="highlighted-text">Reza</span>
+                                                        {t("Welcome")}<span className="highlighted-text"> {t("Name")}</span>
                                                 </span>
                                         </div>
                                         <div className="profile-details-role">
@@ -52,7 +54,7 @@ export default function Profile() {
                                                                 />
                                                         </h1>
                                                         <span className="profile-role-tagline">
-                                                                knack of building applications with front and back end operations.
+                                                                {t("LittleSamaritan")}
                                                         </span>
                                                 </span>
                                         </div>
@@ -60,11 +62,11 @@ export default function Profile() {
                                                 <a href="#ContactMe">
                                                         <button className="btn primary-btn">
                                                                 {""}
-                                                                Hire Me {" "}
+                                                                {t("ContactMe")} {" "}
                                                         </button>
                                                 </a>
                                                 <a href="RezaDalvandCV.pdf" download="RezaDalvandCV.pdf">
-                                                        <button className="btn highlighted-btn">Get Resume</button>
+                                                        <button className="btn highlighted-btn"> {t("GetResume")}</button>
                                                 </a>
                                         </div>
                                 </div>
