@@ -2,6 +2,10 @@ import React from 'react'
 import { Typewriter } from 'react-simple-typewriter';
 import { useTranslation } from "react-i18next";
 import i18next from 'i18next';
+import Github from "../../../assets/Home/github.svg"
+import Linkedin from "../../../assets/Home/linkedin.svg"
+import Instagram from "../../../assets/Home/instagram.svg"
+import Phone from "../../../assets/Home/phone.png"
 import "./Profile.css"
 export default function Profile() {
         const { t } = useTranslation();
@@ -13,16 +17,16 @@ export default function Profile() {
                                         <div className="colz">
                                                 <div className="colz-icon">
                                                         <a href="https://github.com/rezac78" target="_blank">
-                                                                <i className="fa fa-github"></i>
+                                                                <img src={Github} alt="Github" />
                                                         </a>
                                                         <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
-                                                                <i className="fa fa-linkedin"></i>
+                                                                <img src={Linkedin} alt="Linkedin" />
                                                         </a>
                                                         <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
-                                                                <i className="fa fa-instagram"></i>
+                                                                <img src={Instagram} alt="Instagram" />
                                                         </a>
                                                         <a href="tel:09032802041">
-                                                                <i className="fa fa-phone"></i>
+                                                                <img src={Phone} alt="Phone" />
                                                         </a>
                                                 </div>
                                         </div>

@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from "react-i18next";
 import "./ContantMe.css"
-import Mailz from '../../assets/Home/mailz.jpeg'
+import Mailz from '../../assets/Home/mailz.svg'
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Github from "../../assets/Home/github.svg"
+import Linkedin from "../../assets/Home/linkedin.svg"
+import Instagram from "../../assets/Home/instagram.svg"
+import Phone from "../../assets/Home/phone.png"
+import Up from "../../assets/Home/up.png"
 export default function ContantMe() {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
@@ -27,16 +32,16 @@ export default function ContantMe() {
                                                 <p className="styles_typicalWrapper__1_Uvh">Get In Touch 📧</p>
                                         </h2>
                                         <a href="https://github.com/rezac78" target="_blank">
-                                                <i className="fa fa-github"></i>
+                                                <img src={Github} alt="Github" />
                                         </a>
                                         <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
-                                                <i className="fa fa-linkedin"></i>
+                                                <img src={Linkedin} alt="Linkedin" />
                                         </a>
                                         <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
-                                                <i className="fa fa-instagram"></i>
+                                                <img src={Instagram} alt="Instagram" />
                                         </a>
                                         <a href="tel:09032802041">
-                                                <i className="fa fa-phone"></i>
+                                                <img src={Phone} alt="Phone" />
                                         </a>
                                 </div>
                                 <div className="back-form">
@@ -58,7 +63,7 @@ export default function ContantMe() {
                         <div className="scroll-container">
                                 <button onClick={() => {
                                         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                                }} className="btn-scroll"> <i className="fa fa-arrow-up"></i></button>
+                                }} className="btn-scroll"><img className="fa-arrow-up" src={Up} alt="Up"/></button>
                         </div>
                 </div>
         )

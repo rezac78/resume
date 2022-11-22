@@ -49,7 +49,7 @@ export default function Header() {
                                         <div >
                                                 <div className="nav-links">
                                                         <ul>
-                                                                {values.map(({ val, key }) => (
+                                                                {values.map((val, key) => (
                                                                         <li ky={key} onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
                                                                                 <a href={val.Link} >{t(val.name)}</a>
                                                                         </li>
