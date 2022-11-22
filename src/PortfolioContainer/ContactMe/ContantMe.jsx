@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from "react-i18next";
-import i18next from 'i18next';
 import "./ContantMe.css"
 import Mailz from '../../assets/Home/mailz.jpeg'
 import Aos from "aos";
@@ -10,7 +9,6 @@ export default function ContantMe() {
                 Aos.init({ duration: 2000 });
         }, []);
         const { t } = useTranslation();
-        const LocaleCookie = i18next.language;
         return (
                 <div data-aos="fade-up" className="main-container" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
                         <div className="heading-container">
@@ -29,22 +27,22 @@ export default function ContantMe() {
                                                 <p className="styles_typicalWrapper__1_Uvh">Get In Touch 📧</p>
                                         </h2>
                                         <a href="https://github.com/rezac78" target="_blank">
-                                                <i class="fa fa-github"></i>
+                                                <i className="fa fa-github"></i>
                                         </a>
                                         <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
-                                                <i class="fa fa-linkedin"></i>
+                                                <i className="fa fa-linkedin"></i>
                                         </a>
                                         <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
-                                                <i class="fa fa-instagram"></i>
+                                                <i className="fa fa-instagram"></i>
                                         </a>
                                         <a href="tel:09032802041">
-                                                <i class="fa fa-phone"></i>
+                                                <i className="fa fa-phone"></i>
                                         </a>
                                 </div>
                                 <div className="back-form">
                                         <div className="img-back">
                                                 <h4>Send Your Email Here!</h4>
-                                                <img src={Mailz} alt="image not found" />
+                                                <img src={Mailz} alt="not found" />
                                         </div>
                                         <form>
                                                 <p></p>

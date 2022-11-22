@@ -13,7 +13,6 @@ export default function Header() {
 
         const handleIsOpen = () => {
                 setOpen(!isOpen)
-                console.log(isOpen)
         }
         const [activeId, setActiveId] = useState(1);
         const Languages = [
@@ -41,7 +40,6 @@ export default function Header() {
                 { id: 3, name: "Resume", Link: "#Resume" },
                 { id: 4, name: "ContactMe", Link: "#ContactMe" }
         ];
-        const LocaleCookie = i18next.language;
         return (
                 <div isOpen={isOpen}
                         onOpen={handleIsOpen}
@@ -51,8 +49,8 @@ export default function Header() {
                                         <div >
                                                 <div className="nav-links">
                                                         <ul>
-                                                                {values.map((val) => (
-                                                                        <li onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
+                                                                {values.map(({ val, key }) => (
+                                                                        <li ky={key} onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
                                                                                 <a href={val.Link} >{t(val.name)}</a>
                                                                         </li>
                                                                 ))}
@@ -63,7 +61,7 @@ export default function Header() {
                                                                                 </button>
                                                                                 <div className="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
                                                                                         {Languages.map(({ code, name, country_code }) => (
-                                                                                                <a onClick={() => i18next.changeLanguage(code)} key={country_code} class="dropdown-item text-dark" href="#">
+                                                                                                <a onClick={() => i18next.changeLanguage(code)} key={country_code} className="dropdown-item text-dark" href="#">
                                                                                                         <img src={country_code} className="flagIcon" alt="flag" />
                                                                                                         {name}
                                                                                                 </a>
@@ -95,7 +93,7 @@ export default function Header() {
                                                                                 </button>
                                                                                 <div className="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
                                                                                         {Languages.map(({ code, name, country_code }) => (
-                                                                                                <a onClick={() => i18next.changeLanguage(code)} key={country_code} class="dropdown-item text-dark" href="#">
+                                                                                                <a onClick={() => i18next.changeLanguage(code)} key={country_code} className="dropdown-item text-dark" href="#">
                                                                                                         <img src={country_code} className="flagIcon" alt="flag" />
                                                                                                         {name}
                                                                                                 </a>

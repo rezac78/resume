@@ -13,16 +13,16 @@ export default function Profile() {
                                         <div className="colz">
                                                 <div className="colz-icon">
                                                         <a href="https://github.com/rezac78" target="_blank">
-                                                                <i class="fa fa-github"></i>
+                                                                <i className="fa fa-github"></i>
                                                         </a>
                                                         <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
-                                                                <i class="fa fa-linkedin"></i>
+                                                                <i className="fa fa-linkedin"></i>
                                                         </a>
                                                         <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
-                                                                <i class="fa fa-instagram"></i>
+                                                                <i className="fa fa-instagram"></i>
                                                         </a>
                                                         <a href="tel:09032802041">
-                                                                <i class="fa fa-phone"></i>
+                                                                <i className="fa fa-phone"></i>
                                                         </a>
                                                 </div>
                                         </div>

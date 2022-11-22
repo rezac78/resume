@@ -19,8 +19,8 @@ export default function AboutMe() {
                                                 <span>{t("whyHierMy")}</span>
                                         </div>
                                         <div className="heading-seperator">
-                                                <div class="seperator-line"></div>
-                                                <div class="seperator-blob">
+                                                <div className="seperator-line"></div>
+                                                <div className="seperator-blob">
                                                         <div></div>
                                                 </div>
                                         </div>
@@ -29,35 +29,35 @@ export default function AboutMe() {
                                         <div className="about-me-profile">
                                         </div>
                                         <div className="about-me-details">
-                                                <span class="about-me-description">{t("Samaritan")}</span>
-                                                <div class="about-me-highlights">
-                                                        <div class="highlight-heading">
+                                                <span className="about-me-description">{t("Samaritan")}</span>
+                                                <div className="about-me-highlights">
+                                                        <div className="highlight-heading">
                                                                 <span>{t("HeaderHighlights")}</span>
                                                         </div>
-                                                        <div class="highlight">
-                                                                <div class="highlight-blob"></div>
+                                                        <div className="highlight">
+                                                                <div className="highlight-blob"></div>
                                                                 <span>{t("Highlights1")}</span>
                                                         </div>
-                                                        <div class="highlight">
-                                                                <div class="highlight-blob"></div>
+                                                        <div className="highlight">
+                                                                <div className="highlight-blob"></div>
                                                                 <span>{t("Highlights2")}</span>
                                                         </div>
-                                                        <div class="highlight">
-                                                                <div class="highlight-blob"></div>
+                                                        <div className="highlight">
+                                                                <div className="highlight-blob"></div>
                                                                 <span>{t("Highlights3")}</span>
                                                         </div>
-                                                        <div class="highlight">
-                                                                <div class="highlight-blob"></div>
+                                                        <div className="highlight">
+                                                                <div className="highlight-blob"></div>
                                                                 <span>{t("Highlights4")}</span>
                                                         </div>
-                                                        <div class="highlight">
-                                                                <div class="highlight-blob"></div>
+                                                        <div className="highlight">
+                                                                <div className="highlight-blob"></div>
                                                                 <span>{t("Highlights5")}</span>
                                                         </div>
                                                 </div>
-                                                <div class="about-me-options">
+                                                <div className="about-me-options">
                                                         <a href="#ContactMe">
-                                                                <button class="btn primary-btn">
+                                                                <button className="btn primary-btn">
                                                                         {t("ContactMe")}
                                                                 </button>
                                                         </a>

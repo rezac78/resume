@@ -29,8 +29,8 @@ export default function Resume() {
                                                 <span>{t("whyResume")}</span>
                                         </div>
                                         <div className="heading-seperator">
-                                                <div class="seperator-line"></div>
-                                                <div class="seperator-blob">
+                                                <div className="seperator-line"></div>
+                                                <div className="seperator-blob">
                                                         <div></div>
                                                 </div>
                                         </div>
