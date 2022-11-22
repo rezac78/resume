@@ -1,29 +1,28 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter';
 import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
 import "./Profile.css"
 export default function Profile() {
         const { t } = useTranslation();
+        const LocaleCookie = i18next.language;
         return (
                 <div className="profile-container">
                         <div className="profile-parent">
                                 <div className="profile-details">
                                         <div className="colz">
                                                 <div className="colz-icon">
-                                                        <a href="https://github.com/rezac78">
-                                                                <i className="fa fa-facebook-square"></i>
+                                                        <a href="https://github.com/rezac78" target="_blank">
+                                                                <i class="fa fa-github"></i>
                                                         </a>
-                                                        <a href="https://github.com/rezac78">
-                                                                <i className="fa fa-google-plus-square"></i>
+                                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
+                                                                <i class="fa fa-linkedin"></i>
                                                         </a>
-                                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/">
-                                                                <i className="fa fa-instagram-square"></i>
+                                                        <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
+                                                                <i class="fa fa-instagram"></i>
                                                         </a>
-                                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/">
-                                                                <i className="fa fa-youtube-square"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                                <i className="fa fa-twitter-square"></i>
+                                                        <a href="tel:09032802041">
+                                                                <i class="fa fa-phone"></i>
                                                         </a>
                                                 </div>
                                         </div>
@@ -36,7 +35,7 @@ export default function Profile() {
                                         <div className="profile-details-role">
                                                 <span className="primary-text">
                                                         {" "}
-                                                        <h1>
+                                                        <h1 className={LocaleCookie === "en" ? "Typewriter" : "fa-Typewriter"}>
                                                                 {" "}
                                                                 <Typewriter
                                                                         loop={Infinity}
@@ -66,11 +65,11 @@ export default function Profile() {
                                                         </button>
                                                 </a>
                                                 <a href="RezaDalvandCV.pdf" download="RezaDalvandCV.pdf">
-                                                        <button className="btn highlighted-btn"> {t("GetResume")}</button>
+                                                        <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
                                                 </a>
                                         </div>
                                 </div>
-                                <div className="profile-picture">
+                                <div className={LocaleCookie === "en" ? "profile-picture" : "fa-profile-picture"}>
                                         <div className="profile-picture-background">
 
                                         </div>

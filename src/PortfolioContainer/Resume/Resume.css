@@ -98,6 +98,10 @@
   height: 18px;
   margin: 0 30px 0 0;
 }
+.bullets .bullet .fa-bullet-logo{
+  height: 18px;
+  margin: 0 0 0 30px;
+}
 .bullets .bullet .bullet-label{
   font-size: 14px;
   white-space: nowrap;
@@ -108,6 +112,12 @@
   width: 600px;
   overflow: hidden;
   padding: 0 0 0 80px;
+}
+.fa-resume-bullet-details{
+  flex-grow: 1;
+  width: 600px;
+  overflow: hidden;
+  padding: 0 80px 0 0;
 }
 .resume-details-carousal{
   transform: translateY(0px);
@@ -123,10 +133,18 @@
 }
 .resume-screen-container{
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   justify-content: space-evenly;
   height: 360px;
   width: 100%;
+}
+.fa-resume-screen-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 360px;
+  width: 100%;
+  direction:ltr;
 }
 .resume-heading{
   display: flex;
@@ -158,6 +176,13 @@
   font-family: "Poppins SemiBold";
   color: var(--black);
   margin: 10px 0 0;
+}
+.fa-resume-sub-heading{
+  font-size: 14px;
+  font-family: "Poppins SemiBold";
+  color: var(--black);
+  margin: 10px 0 0;
+  text-align: right;
 }
 .resume-heading-description{
   font-size: 12px;
@@ -226,13 +251,21 @@
   }
   .resume-bullet-details {
     width: 500px;
-    padding: 0 0 0 30px;
+    padding: 45px 0px 0 0;
+  }
+  .fa-resume-bullet-details{
+    width: 500px;
+    padding: 45px 0px 0 0;
   }
 }
 @media screen and (max-width: 520px) {
   .resume-bullet-details {
     width: 350px;
-    padding: 0 0 0 30px;
+    padding: 45px 0px 0 0;
+  }
+  .fa-resume-bullet-details{
+    width: 350px;
+    padding: 45px 0px 0 0;
   }
   .heading-date {
     padding: 8px 5px;
@@ -253,7 +286,11 @@
 @media screen and (max-width: 375px) {
   .resume-bullet-details {
     width: 300px;
-    padding: 0 0 0 30px;
+    padding:45px 0px 0 10px;
+  }
+  .fa-resume-bullet-details{
+    width: 300px;
+    padding: 45px 0px 0 0;
   }
   .heading-date {
     padding: 8px 5px;

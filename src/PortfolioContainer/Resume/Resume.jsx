@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
 import "./Resume.css"
 import Education from "../../assets/Home/Education.svg"
 import History from "../../assets/Home/history.svg"
@@ -16,8 +17,9 @@ export default function Resume() {
                 Aos.init({ duration: 2000 });
         }, []);
         const { t } = useTranslation();
+        const LocaleCookie = i18next.language;
         return (
-                <div data-aos="fade-right" className="resume-container" id="Resume">
+                <div data-aos="fade-up" className="resume-container" id="Resume">
                         <div className="resume-content">
                                 <div className="heading-container">
                                         <div className="screen-heading">
@@ -39,34 +41,33 @@ export default function Resume() {
                                                         <div className="bullet-icons"></div>
                                                         <div className="bullets">
                                                                 <div className={toggleState === 1 ? "bullet selected" : " bullet"} onClick={() => toggleTab(1)}>
-                                                                        <img className="bullet-logo" alt="B" src={Education} />
+                                                                        <img className={LocaleCookie === "en" ? "bullet-logo" : "fa-bullet-logo"} alt="B" src={Education} />
                                                                         <span className="bullet-label">{t("Education")}</span>
                                                                 </div>
                                                                 <div className={toggleState === 2 ? "bullet selected" : " bullet"} onClick={() => toggleTab(2)}>
-                                                                        <img className="bullet-logo" alt="B" src={History} />
+                                                                        <img className={LocaleCookie === "en" ? "bullet-logo" : "fa-bullet-logo"} alt="B" src={History} />
                                                                         <span className="bullet-label">{t("WorkHistory")}</span>
                                                                 </div>
                                                                 <div className={toggleState === 3 ? "bullet selected" : " bullet"} onClick={() => toggleTab(3)}>
-                                                                        <img className="bullet-logo" alt="B" src={Programming} />
+                                                                        <img className={LocaleCookie === "en" ? "bullet-logo" : "fa-bullet-logo"} alt="B" src={Programming} />
                                                                         <span className="bullet-label">{t("ProgrammingSkills")}</span>
                                                                 </div>
                                                                 <div className={toggleState === 4 ? "bullet selected" : " bullet"} onClick={() => toggleTab(4)}>
-                                                                        <img className="bullet-logo" alt="B" src={Projects} />
+                                                                        <img className={LocaleCookie === "en" ? "bullet-logo" : "fa-bullet-logo"} alt="B" src={Projects} />
                                                                         <span className="bullet-label">{t("Projects")}</span>
                                                                 </div>
                                                         </div>
                                                 </div>
                                         </div>
-                                        <div class="resume-bullet-details">
+                                        <div className={LocaleCookie === "en" ? "resume-bullet-details" : "fa-resume-bullet-details"}>
                                                 <div className={toggleState === 1 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className="resume-screen-container">
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
                                                                                 <span>{t("HeaderEducation")}</span>
                                                                                 <div className="heading-date">{t("HeaderDate")}</div>
                                                                         </div>
-                                                                        <div className="resume-sub-heading">
+                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
                                                                                 <span>{t("MainEducation")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
@@ -106,7 +107,7 @@ export default function Resume() {
                                                         </div>
                                                 </div>
                                                 <div className={toggleState === 2 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className="resume-screen-container">
+                                                        <div className={LocaleCookie === "en" ? "resume-screen-container" : "fa-resume-screen-container"}>
                                                                 <div className="experience-container">
                                                                         <div className="resume-heading">
                                                                                 <div className="resume-main-heading">
@@ -156,7 +157,7 @@ export default function Resume() {
                                                         </div>
                                                 </div>
                                                 <div className={toggleState === 3 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className="resume-screen-container programming-skills-container">
+                                                        <div className={LocaleCookie === "en" ? "resume-screen-container programming-skills-container" : "fa-resume-screen-container programming-skills-container"}>
                                                                 <div className="skill-parent">
                                                                         <span>JavaScript</span>
                                                                         <div className="skill-percentage">
@@ -207,11 +208,10 @@ export default function Resume() {
                                                         <div className="resume-screen-container">
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
                                                                                 <span>{t("ProjectsTitle")}</span>
                                                                                 <div className="heading-date">{t("ProjectsDate")}</div>
                                                                         </div>
-                                                                        <div className="resume-sub-heading">
+                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
                                                                                 <span>{t("ProjectsSkills")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
@@ -223,11 +223,10 @@ export default function Resume() {
                                                                 </div>
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
                                                                                 <span>{t("ProjectsTitle")}</span>
                                                                                 <div className="heading-date">{t("ProjectsDate")}</div>
                                                                         </div>
-                                                                        <div className="resume-sub-heading">
+                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
                                                                                 <span>{t("ProjectsSkills")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">
@@ -239,11 +238,10 @@ export default function Resume() {
                                                                 </div>
                                                                 <div className="resume-heading">
                                                                         <div className="resume-main-heading">
-                                                                                <div className="heading-bullet"></div>
                                                                                 <span>{t("ProjectsTitle")}</span>
                                                                                 <div className="heading-date">{t("ProjectsDate")}</div>
                                                                         </div>
-                                                                        <div className="resume-sub-heading">
+                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
                                                                                 <span>{t("ProjectsSkills")}</span>
                                                                         </div>
                                                                         <div className="resume-heading-description">

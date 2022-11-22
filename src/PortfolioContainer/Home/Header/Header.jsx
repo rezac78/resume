@@ -41,6 +41,7 @@ export default function Header() {
                 { id: 3, name: "Resume", Link: "#Resume" },
                 { id: 4, name: "ContactMe", Link: "#ContactMe" }
         ];
+        const LocaleCookie = i18next.language;
         return (
                 <div isOpen={isOpen}
                         onOpen={handleIsOpen}
@@ -55,6 +56,22 @@ export default function Header() {
                                                                                 <a href={val.Link} >{t(val.name)}</a>
                                                                         </li>
                                                                 ))}
+                                                                <li>
+                                                                        <div className="dropdown">
+                                                                                <button style={{ direction: 'ltr' }} className="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                        <img className='GlobalImg' src={GlobeIcon} alt='Global' />
+                                                                                </button>
+                                                                                <div className="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
+                                                                                        {Languages.map(({ code, name, country_code }) => (
+                                                                                                <a onClick={() => i18next.changeLanguage(code)} key={country_code} class="dropdown-item text-dark" href="#">
+                                                                                                        <img src={country_code} className="flagIcon" alt="flag" />
+                                                                                                        {name}
+                                                                                                </a>
+
+                                                                                        ))}
+                                                                                </div>
+                                                                        </div>
+                                                                </li>
                                                         </ul>
                                                 </div>
                                                 <div onClick={handleIsOpen}>
@@ -73,7 +90,7 @@ export default function Header() {
                                                                 ))}
                                                                 <li>
                                                                         <div className="dropdown">
-                                                                                <button className="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                <button style={{ direction: 'ltr' }} className="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                                         <img className='GlobalImg' src={GlobeIcon} alt='Global' />
                                                                                 </button>
                                                                                 <div className="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">

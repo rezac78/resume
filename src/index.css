@@ -122,8 +122,17 @@ body ::-webkit-scrollbar-thumb {
   font-size: 12px;
   background-color: #ff5823;
 }
+.fa-highlighted-btn {
+  color: var(--white);
+
+  font-size: 12px;
+  background-color: #ff5823;
+}
 @media only screen and (max-width: 568px) {
   .highlighted-btn {
+    z-index: -900;
+  }
+  .fa-highlighted-btn {
     z-index: -900;
   }
 }

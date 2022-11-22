@@ -21,7 +21,7 @@
         margin:14px 0 24px 0;
 }
 .profile-details-role h1{
-        font-size:40px;
+        font-size:36px;
         font-family: cursive;
 }
 .primary-text{
@@ -43,6 +43,14 @@
         background-color:cornsilk;
         color:#111;
 }
+.profile-options .fa-highlighted-btn{
+        margin:0 20px 0 0;
+}
+.profile-options .fa-highlighted-btn:hover{
+        margin:0 20px 0 0;
+        background-color:cornsilk;
+        color:#111;
+}
 .profile-picture{
         display: flex;
         align-items: center;
@@ -52,6 +60,24 @@
         height:380px;
         width: 380px;
         margin: 0 0px 0 100px;
+}
+.fa-profile-picture{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 0px 0px var(--white);
+        border-radius: 50%;
+        height:380px;
+        width: 380px;
+        margin: 0 100px 0 0px;
+}
+.Typewriter{
+        direction: ltr;
+        width:auto;
+}
+.fa-Typewriter{
+        direction: ltr;
+        width: 360px;
 }
 .profile-picture-background{
         height: 92%;
@@ -82,6 +108,9 @@
         .profile-picture{
                 margin:0 0px 0 80px;
         }
+        .fa-profile-picture{
+                margin:0 80px 0 0px;
+        }
         .profile-details-name{
                 font-size:20px;
         }
@@ -100,10 +129,18 @@
                 width:320px;
                 margin:0 0 0 4px;
         }
+        .fa-profile-picture{
+                height:320px;
+                width:320px;
+                margin:0 4px 0 0;  
+        }
 }
 
 @media screen and (max-width: 810px){
         .profile-picture{
+                margin:0 !important;
+        }
+        .fa-profile-picture{
                 margin:0 !important;
         }
         .profile-parent{
@@ -124,6 +161,15 @@
         .profile-details-role {
                 text-align:center;
         }
+        .profile-details-role h1{
+                font-size:35px;
+        }
+        .Typewriter{
+                width: auto;
+        }
+        .fa-Typewriter{
+                width: auto;
+        }
 }
 @media screen and (max-width: 375px){
         .profile-picture{
@@ -133,5 +179,8 @@
         }
         .profile-details{
                 width:90%;
+        }
+        .profile-details-role h1{
+                font-size:25px;
         }
 }

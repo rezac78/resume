@@ -1,5 +1,6 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
 import "./ContantMe.css"
 import Mailz from '../../assets/Home/mailz.jpeg'
 import Aos from "aos";
@@ -9,8 +10,9 @@ export default function ContantMe() {
                 Aos.init({ duration: 2000 });
         }, []);
         const { t } = useTranslation();
+        const LocaleCookie = i18next.language;
         return (
-                <div data-aos="fade-up" className="main-container fade-in" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
+                <div data-aos="fade-up" className="main-container" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
                         <div className="heading-container">
                                 <div className="screen-heading"><span>{t("ContactMe")}</span></div>
                                 <div className="screen-sub-heading"><span>{t("whyContactMe")}</span></div>
@@ -25,14 +27,19 @@ export default function ContantMe() {
                                 <div className="col">
                                         <h2 className="title">
                                                 <p className="styles_typicalWrapper__1_Uvh">Get In Touch 📧</p>
-                                        </h2> <a href="https://web.facebook.com/?_rdc=1&amp;_rdr"><i
-                                                className="fa fa-facebook-square"></i></a><a href="#"><i
-                                                        className="fa fa-google-plus-square"></i></a><a
-                                                                href="https://www.instagram.com/instructor_ehizeex/"><i
-                                                                        className="fa fa-instagram"></i></a><a
-                                                                                href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA"><i
-                                                                                        className="fa fa-youtube-square"></i></a><a
-                                                                                                href="https://twitter.com/Ehiedu_baba"><i className="fa fa-twitter"></i></a>
+                                        </h2>
+                                        <a href="https://github.com/rezac78" target="_blank">
+                                                <i class="fa fa-github"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
+                                                <i class="fa fa-linkedin"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                        </a>
+                                        <a href="tel:09032802041">
+                                                <i class="fa fa-phone"></i>
+                                        </a>
                                 </div>
                                 <div className="back-form">
                                         <div className="img-back">
