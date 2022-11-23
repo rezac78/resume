@@ -9,10 +9,10 @@ import GlobeIcon from "../../../assets/Home/Global.svg"
 import Iran from "../../../assets/Home/Iran.svg"
 import English from "../../../assets/Home/uk.svg"
 export default function Header() {
-        const [isOpen, setOpen] = useState(false)
+        const [OpenMenu, setOpenMenu] = useState(false)
 
         const handleIsOpen = () => {
-                setOpen(!isOpen)
+                setOpenMenu(!OpenMenu)
         }
         const [activeId, setActiveId] = useState(1);
         const Languages = [
@@ -41,16 +41,14 @@ export default function Header() {
                 { id: 4, name: "ContactMe", Link: "#ContactMe" }
         ];
         return (
-                <div isOpen={isOpen}
-                        onOpen={handleIsOpen}
-                        onClose={handleIsOpen} className="navbar">
+                <div  className="navbar">
                         {
-                                isOpen === true ?
+                                OpenMenu === true ?
                                         <div >
                                                 <div className="nav-links">
                                                         <ul>
                                                                 {values.map((val, key) => (
-                                                                        <li ky={key} onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
+                                                                        <li key={key} onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
                                                                                 <a href={val.Link} >{t(val.name)}</a>
                                                                         </li>
                                                                 ))}
@@ -81,8 +79,8 @@ export default function Header() {
                                         <div>
                                                 <div className="nav-links-PC">
                                                         <ul>
-                                                                {values.map((val) => (
-                                                                        <li onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
+                                                                {values.map((val, key) => (
+                                                                        <li key={key} onClick={() => setActiveId(val.id)} className={activeId === val.id ? "active" : "Inactive"}>
                                                                                 <a href={val.Link} >{t(val.name)}</a>
                                                                         </li>
                                                                 ))}

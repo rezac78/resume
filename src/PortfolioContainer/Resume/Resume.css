@@ -76,10 +76,14 @@
   width: 30px;
   transition: width .6s ease;
 }
+.bullets .bullet img{
+  width: 35px;
+  height: 35px;
+}
 .selected{
   animation: phone 1s ease-in-out  infinite;
   animation-iteration-count: 2;
-  color: #ff5823;
+  color: #D13400;
 }
 @keyframes phone {
   0%,30%,60%,90%, 100% {
@@ -162,10 +166,10 @@
   width: 15px;
   top: 5px;
   border-radius: 50%;
-  background-color: #ff5823;
+  background-color: #D13400;
 }
 .heading-date{
-  background-color: #ff5823;
+  background-color: #D13400;
   padding: 4px 12px;
   font-size: 14px;
   border-radius: 14px;
@@ -216,18 +220,18 @@
   width: 15px;
   top: 5px;
   border-radius: 50%;
-  background-color: #ff5823;
+  background-color: #D13400;
 }
 .skill-parent span {
   font-family: "Poppins Bold";
   font-size: 16px;
-  color: #ff5823;
+  color: #D13400;
 }
 .skill-percentage {
   position: relative;
   height: 15px;
   width: 70%;
-  background-color: #ff5823;
+  background-color: #D13400;
 }
 .active-percentage-bar{
   height: 15px;

@@ -26,16 +26,18 @@
         margin-top: 0;
         margin-bottom: 1rem; 
 }
-.col a{
+.col img{
         color: #007bff;
         text-decoration: none;
         background-color: transparent;
 }
-.col i{
+.col img{
+        height:45px;
+        width:45px;
         padding: 7px;
         color: #fff;
 }
-.col i:hover {
+.col img:hover {
         transform: scale(1.5);
 }
 .back-form{
@@ -44,9 +46,10 @@
 }
 .back-form .img-back{
         width: 100%;
+        height:auto;
         margin-bottom: 20px;
 }
-.back-form .img-back h4{
+.back-form .img-back h3{
         letter-spacing: .3rem;
         font-weight: 400;
         color: #fff;
@@ -55,6 +58,7 @@
 } 
 .back-form .img-back img{
         width: 100%;
+        height:100%;
         opacity: .5;
 }
 .central-form form{
@@ -74,7 +78,7 @@
 form p{
         text-align: center;
         margin-bottom: 10px;
-        color: #ff5823;
+        color: #D13400;
         letter-spacing: .1rem;
         font-family: "Poppins Bold";
 }
@@ -108,7 +112,7 @@ form button{
         outline: none;
         width: 900px;
         color: #e6e3e3;
-        border: 2px solid #ff5823;
+        border: 2px solid #D13400;
         font-size: 12px;
         border-radius: 19px;
         background-color: #1f2235;
@@ -159,8 +163,16 @@ button .load img {
         border-radius: 10px;
         border: none;    
 }
+.btn-scroll img{
+        width: 30px;
+        height: 30px;
+}
 .fa-arrow-up{
         animation: updown 3s ease infinite;
+}
+.send-btn img{
+        width: 30px;
+        height: 30px;
 }
 @keyframes updown {
         0% {

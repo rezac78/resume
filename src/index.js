@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetectors from "i18next-browser-languagedetector";
@@ -23,4 +23,10 @@ i18n
     },
     react: { useSuspense: false },
   });
-ReactDOM.render(<App />, document.getElementById("root"));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

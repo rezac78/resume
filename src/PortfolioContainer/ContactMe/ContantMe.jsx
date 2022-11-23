@@ -9,13 +9,14 @@ import Linkedin from "../../assets/Home/linkedin.svg"
 import Instagram from "../../assets/Home/instagram.svg"
 import Phone from "../../assets/Home/phone.png"
 import Up from "../../assets/Home/up.png"
+import PaperPlane from "../../assets/Home/email-send.png"
 export default function ContantMe() {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
         }, []);
         const { t } = useTranslation();
         return (
-                <div data-aos="fade-up" className="main-container" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px);" }}>
+                <div data-aos="fade-up" className="main-container" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px)" }}>
                         <div className="heading-container">
                                 <div className="screen-heading"><span>{t("ContactMe")}</span></div>
                                 <div className="screen-sub-heading"><span>{t("whyContactMe")}</span></div>
@@ -46,24 +47,25 @@ export default function ContantMe() {
                                 </div>
                                 <div className="back-form">
                                         <div className="img-back">
-                                                <h4>Send Your Email Here!</h4>
+                                                <h3>Send Your Email Here!</h3>
                                                 <img src={Mailz} alt="not found" />
                                         </div>
                                         <form>
                                                 <p></p>
-                                                <label for="name">Name</label>
-                                                <input type="text" value="" /><label
-                                                        for="email">Email</label><input type="email" value="" /><label
-                                                                for="message">Message</label><textarea type="text"></textarea>
-                                                <div className="send-btn"><button type="submit">send<i
-                                                        className="fa fa-paper-plane"></i></button></div>
+                                                <label htmlFor="name">Name</label>
+                                                <input id="name" type="text"  />
+                                                <label htmlFor="email">Email</label>
+                                                <input id="email" type="email"  />
+                                                <label htmlFor="message">Message</label>
+                                                <textarea id="message" type="text"></textarea>
+                                                <div className="send-btn"><button type="submit">send<img src={PaperPlane} alt="PaperPlane" /></button></div>
                                         </form>
                                 </div>
                         </div>
                         <div className="scroll-container">
                                 <button onClick={() => {
                                         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                                }} className="btn-scroll"><img className="fa-arrow-up" src={Up} alt="Up"/></button>
+                                }} className="btn-scroll"><img className="fa-arrow-up" src={Up} alt="Up" /></button>
                         </div>
                 </div>
         )

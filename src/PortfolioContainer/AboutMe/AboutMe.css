@@ -86,7 +86,7 @@
         height: 12px;
         width: 12px;
         margin: 0 10px 0 0;
-        background-color: #ff5823;
+        background-color: #D13400;
         border-radius: 50%;
 }
 
@@ -100,7 +100,13 @@
 }
 @media screen and (max-width: 440px){
         .about-me-details .about-me-description{
-                font-size: 9px;
+                font-size: 12px;
+        }
+        .about-me-details {
+                padding: 20px;
+        }
+        .about-me-container .about-me-parent {
+                width: 90%;
         }
         .about-me-highlights .highlight{
                 font-size: 9px;

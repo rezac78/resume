@@ -95,12 +95,16 @@
 .colz .colz-icon{
         font-size:1.4rem;
 }
-.colz .colz-icon i{
+.colz .colz-icon img{
+        height:46px;
+        width:37px;
+}
+.colz .colz-icon img{
         color:white;
         padding:8px;
         padding-left: 0px;
 }
-.colz .colz-icon i:hover{
+.colz .colz-icon img:hover{
         transform: scale(1.5);
 }
 
