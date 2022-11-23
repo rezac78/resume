@@ -68,9 +68,15 @@ export default function Profile() {
                                                                 {t("ContactMe")} {" "}
                                                         </button>
                                                 </a>
-                                                <a href="RezaDalvandCV.pdf" download="RezaDalvandCV.pdf">
-                                                        <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
-                                                </a>
+                                                {LocaleCookie === "en" ?
+                                                        <a href="RezaDalvandEn.pdf" download="RezaDalvandEn.pdf">
+                                                                <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
+                                                        </a>
+                                                        :
+                                                        <a href="RezaDalvandCV.pdf" download="RezaDalvandCV.pdf">
+                                                                <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
+                                                        </a>
+                                                }
                                         </div>
                                 </div>
                                 <div className={LocaleCookie === "en" ? "profile-picture" : "fa-profile-picture"}>
