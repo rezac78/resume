@@ -32,18 +32,20 @@ export default function ContantMe() {
                                         <h2 className="title">
                                                 <p className="styles_typicalWrapper__1_Uvh">Get In Touch 📧</p>
                                         </h2>
-                                        <a href="https://github.com/rezac78" target="_blank">
-                                                <img src={Github} alt="Github" />
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
-                                                <img src={Linkedin} alt="Linkedin" />
-                                        </a>
-                                        <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
-                                                <img src={Instagram} alt="Instagram" />
-                                        </a>
-                                        <a href="tel:09032802041">
-                                                <img src={Phone} alt="Phone" />
-                                        </a>
+                                        <div className="icon-Group">
+                                                <a href="https://github.com/rezac78" target="_blank">
+                                                        <img src={Github} alt="Github" />
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/reza-dalvand-ab7a32206/" target="_blank">
+                                                        <img src={Linkedin} alt="Linkedin" />
+                                                </a>
+                                                <a href="https://www.instagram.com/reza.dalvand78" target="_blank">
+                                                        <img src={Instagram} alt="Instagram" />
+                                                </a>
+                                                <a href="tel:09032802041">
+                                                        <img src={Phone} alt="Phone" />
+                                                </a>
+                                        </div>
                                 </div>
                                 <div className="back-form">
                                         <div className="img-back">
@@ -53,9 +55,9 @@ export default function ContantMe() {
                                         <form>
                                                 <p></p>
                                                 <label htmlFor="name">Name</label>
-                                                <input id="name" type="text"  />
+                                                <input id="name" type="text" />
                                                 <label htmlFor="email">Email</label>
-                                                <input id="email" type="email"  />
+                                                <input id="email" type="email" />
                                                 <label htmlFor="message">Message</label>
                                                 <textarea id="message" type="text"></textarea>
                                                 <div className="send-btn"><button type="submit">send<img src={PaperPlane} alt="PaperPlane" /></button></div>

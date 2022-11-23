@@ -81,7 +81,6 @@ export default function Profile() {
                                 </div>
                                 <div className={LocaleCookie === "en" ? "profile-picture" : "fa-profile-picture"}>
                                         <div className="profile-picture-background">
-
                                         </div>
                                 </div>
                         </div>
