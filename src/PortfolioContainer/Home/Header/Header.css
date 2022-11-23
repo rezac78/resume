@@ -12,6 +12,9 @@
         font-family: "Poppins SemiBold";
         font-size: 1.3rem;
 }
+.navbar .nav-links{
+        z-index: 1;
+}
 .navbar .nav-links ul{
         text-decoration: none;
         list-style: none;
