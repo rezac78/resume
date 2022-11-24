@@ -6,7 +6,6 @@ import LanguageDetectors from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import App from "./App";
 import "./index.css";
-
 i18n
   .use(initReactI18next)
   .use(LanguageDetectors)
