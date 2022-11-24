@@ -98,14 +98,14 @@ export default function ContantMe() {
                                         </div>
                                         <form ref={form} onSubmit={handleSubmit}>
                                                 <p></p>
-                                                <label htmlFor="name">Name</label>
-                                                <input type="text" name="user_name" value={values.user_name} onChange={handleChange} />
+                                                <label htmlFor="user_name">Name</label>
+                                                <input type="text" id="user_name" name="user_name" value={values.user_name} onChange={handleChange} />
                                                 {errors.user_name && <p className="error">{errors.user_name}</p>}
-                                                <label htmlFor="email">Email</label>
-                                                <input type="email" name="user_email" value={values.user_email} onChange={handleChange} />
+                                                <label htmlFor="user_email">Email</label>
+                                                <input type="email" id="user_email" value={values.user_email} onChange={handleChange} />
                                                 {errors.user_email && <p className="error">{errors.user_email}</p>}
                                                 <label htmlFor="message">Message</label>
-                                                <textarea type="text" name="message" value={values.message} onChange={handleChange} />
+                                                <textarea type="text" id="message" value={values.message} onChange={handleChange} />
                                                 {errors.message && <p className="error">{errors.message}</p>}
                                                 <div className="send-btn"><button type="submit">send<img src={PaperPlane} alt="PaperPlane" /></button></div>
                                         </form>
