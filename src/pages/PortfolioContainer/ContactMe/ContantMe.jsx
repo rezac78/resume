@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
-import { useRouter } from 'next/router';
-import emailjs from 'emailjs-com';
+import i18next from 'i18next';
+import emailjs from '@emailjs/browser';
 import Image from 'next/image'
 import Link from 'next/link'
 import { FormSchema } from "../../../schemas";
@@ -23,10 +23,9 @@ export default function ContantMe() {
         }, []);
         const { t } = useTranslation();
         const form = useRef();
-        const router = useRouter();
-        const LocaleCookie = router.locale;
+        const LocaleCookie = i18next.language;
         const onSubmit = (e, actions) => {
-                emailjs.sendForm('service_kz733m7', 'template_eiik573', form.current, '-AohTxKTUcg7RfNbr')
+                emailjs.sendForm('service_pke74m6', 'template_hk0t1os', form.current, '-AohTxKTUcg7RfNbr')
                         .then((result) => {
                                 console.log(result.text);
                                 LocaleCookie === "en" ?
@@ -41,7 +40,7 @@ export default function ContantMe() {
                                                 closeButton: true,
                                                 closeOnClick: true,
                                         });
-
+                                actions.resetForm();
                         }, (error) => {
                                 console.log(error.text);
                                 toast.error(` Eror❗️❗️❗️`, {
@@ -49,8 +48,6 @@ export default function ContantMe() {
                                         closeOnClick: true,
                                 });
                         });
-
-                actions.resetForm();
         }
         const { values, errors, handleChange, handleSubmit } = useFormik({
                 initialValues: {
@@ -88,9 +85,9 @@ export default function ContantMe() {
                                                 <Link href="https://www.instagram.com/reza.dalvand78" target="_blank">
                                                         <Image src={Instagram} alt="Instagram" />
                                                 </Link>
-                                                <a href="tel:09032802041">
+                                                <Link href="tel:09032802041">
                                                         <Image src={Phone} alt="Phone" />
-                                                </a>
+                                                </Link>
                                         </div>
                                 </div>
                                 <div className="back-form">
@@ -100,14 +97,14 @@ export default function ContantMe() {
                                         </div>
                                         <form ref={form} onSubmit={handleSubmit}>
                                                 <p></p>
-                                                <label htmlFor="user_name">Name</label>
-                                                <input type="text" id="user_name" name="user_name" value={values.user_name} onChange={handleChange} />
+                                                <label htmlFor="name">Name</label>
+                                                <input type="text" name="user_name" value={values.user_name} onChange={handleChange} />
                                                 {errors.user_name && <p className="error">{errors.user_name}</p>}
-                                                <label htmlFor="user_email">Email</label>
-                                                <input type="email" id="user_email" value={values.user_email} onChange={handleChange} />
+                                                <label htmlFor="email">Email</label>
+                                                <input type="email" name="user_email" value={values.user_email} onChange={handleChange} />
                                                 {errors.user_email && <p className="error">{errors.user_email}</p>}
                                                 <label htmlFor="message">Message</label>
-                                                <textarea type="text" id="message" value={values.message} onChange={handleChange} />
+                                                <textarea type="text" name="message" value={values.message} onChange={handleChange} />
                                                 {errors.message && <p className="error">{errors.message}</p>}
                                                 <div className="send-btn"><button type="submit">send<Image src={PaperPlane} alt="PaperPlane" /></button></div>
                                         </form>
