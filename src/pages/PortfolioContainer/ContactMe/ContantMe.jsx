@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
 import i18next from 'i18next';
+import api from "../../api/api";
 import emailjs from '@emailjs/browser';
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,6 +26,7 @@ export default function ContantMe() {
         const form = useRef();
         const LocaleCookie = i18next.language;
         const onSubmit = (e, actions) => {
+                api.post("api/", e);
                 emailjs.sendForm('service_pke74m6', 'template_hk0t1os', form.current, '-AohTxKTUcg7RfNbr')
                         .then((result) => {
                                 console.log(result.text);
