@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useTranslation } from "next-i18next";
 import Aos from "aos";
 import "aos/dist/aos.css";
-export default function AboutMe() {
+export default function AboutMe({ samaritan, highlights, aboutImage }) {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
         }, []);
@@ -26,33 +26,20 @@ export default function AboutMe() {
                                 </div>
                                 <div className="about-me-card">
                                         <div className="about-me-profile">
+                                                <img src={aboutImage} alt="aboutImage" />
                                         </div>
                                         <div className="about-me-details">
-                                                <span className="about-me-description">{t("Samaritan")}</span>
+                                                <span className="about-me-description">{samaritan}</span>
                                                 <div className="about-me-highlights">
                                                         <div className="highlight-heading">
                                                                 <span>{t("HeaderHighlights")}</span>
                                                         </div>
-                                                        <div className="highlight">
-                                                                <div className="highlight-blob"></div>
-                                                                <span>{t("Highlights1")}</span>
-                                                        </div>
-                                                        <div className="highlight">
-                                                                <div className="highlight-blob"></div>
-                                                                <span>{t("Highlights2")}</span>
-                                                        </div>
-                                                        <div className="highlight">
-                                                                <div className="highlight-blob"></div>
-                                                                <span>{t("Highlights3")}</span>
-                                                        </div>
-                                                        <div className="highlight">
-                                                                <div className="highlight-blob"></div>
-                                                                <span>{t("Highlights4")}</span>
-                                                        </div>
-                                                        <div className="highlight">
-                                                                <div className="highlight-blob"></div>
-                                                                <span>{t("Highlights5")}</span>
-                                                        </div>
+                                                        {highlights.map((e, key) => {
+                                                                return <div className="highlight" key={key}>
+                                                                        <div className="highlight-blob"></div>
+                                                                        <span>{e}</span>
+                                                                </div>
+                                                        })}
                                                 </div>
                                                 <div className="about-me-options">
                                                         <a href="#ContactMe">

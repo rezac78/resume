@@ -8,7 +8,7 @@ import Programming from "../../assets/Home/Programming.svg"
 import Projects from "../../assets/Home/Projects.svg"
 import Aos from "aos";
 import "aos/dist/aos.css";
-export default function Resume() {
+export default function Resume({ resumeEducation, resumeWorkHistorie, programmingSkillsresume, resumeProject }) {
         const [toggleState, setToggleState] = useState(1);
         const toggleTab = (index) => {
                 setToggleState(index);
@@ -62,176 +62,96 @@ export default function Resume() {
                                         </div>
                                         <div className={LocaleCookie === "en" ? "resume-bullet-details" : "fa-resume-bullet-details"}>
                                                 <div className={toggleState === 1 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className="resume-screen-container">
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <span>{t("HeaderEducation")}</span>
-                                                                                <div className="heading-date">{t("HeaderDate")}</div>
-                                                                        </div>
-                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
-                                                                                <span>{t("MainEducation")}</span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span></span>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="experience-container">
+                                                        {resumeEducation.map((e) => {
+                                                                return <div key={e.id} className="resume-screen-container">
                                                                         <div className="resume-heading">
+                                                                                <div className="resume-main-heading">
+                                                                                        <span>{e.educationTitle}</span>
+                                                                                        <div className="heading-date">{e.educationData}</div>
+                                                                                </div>
+                                                                                <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
+                                                                                        <span>{e.educationStady}</span>
+                                                                                        <div className="heading-Location">{t("Location")} : {e.educationLocation}</div>
+                                                                                </div>
+                                                                                <div className="resume-heading-description">
+                                                                                        <span></span>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div className="experience-container">
+                                                                                <div className="resume-heading">
+                                                                                </div>
                                                                         </div>
                                                                 </div>
-                                                        </div>
+                                                        })}
                                                 </div>
                                                 <div className={toggleState === 2 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className={LocaleCookie === "en" ? "resume-screen-container" : "fa-resume-screen-container"}>
-                                                                <div className="experience-container">
-                                                                        <div className="resume-heading">
-                                                                                <div className="resume-main-heading">
-                                                                                        <div className="heading-bullet"></div>
-                                                                                        <span>{t("HeaderWorkHistory")}</span>
-                                                                                        <div className="heading-date">{t("DateWorkHistory")}</div>
+                                                        <div className={LocaleCookie === "en" ? "resume-screen-container-workHistory" : "fa-resume-screen-container-workHistory"}>
+                                                                {resumeWorkHistorie.map((e) => {
+                                                                        return <div className="experience-container" key={e.id}>
+                                                                                <div className="resume-heading">
+                                                                                        <div className="resume-main-heading">
+                                                                                                <div className="heading-bullet"></div>
+                                                                                                <span>{e.workHistoryTitle}</span>
+                                                                                                <div className="heading-date">{e.workHistoryData}</div>
+                                                                                        </div>
+                                                                                        <div className="resume-sub-heading">
+                                                                                                <span>{t("Location")} : {e.workHistoryLocation}</span>
+                                                                                        </div>
+                                                                                        <div className="resume-heading-description">
+                                                                                                <span></span>
+                                                                                        </div>
                                                                                 </div>
                                                                                 <div className="resume-sub-heading">
-                                                                                        <span>{t("LocationWorkHistory")}</span>
+                                                                                        <span className="">
+                                                                                                {e.workHistoryPosition}
+                                                                                        </span>
                                                                                 </div>
-                                                                                <div className="resume-heading-description">
-                                                                                        <span></span>
-                                                                                </div>
-                                                                        </div>
-                                                                        <div className="resume-sub-heading">
-                                                                                <span className="">
-                                                                                        {t("JobPosition")}
-                                                                                </span>
-                                                                        </div>
-                                                                        <div className="experience-description">
-                                                                                <a href={t("linkWorkHistory")}>{t("HeaderWorkHistory")}</a>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="experience-container">
-                                                                        <div className="resume-heading">
-                                                                                <div className="resume-main-heading">
-                                                                                        <div className="heading-bullet"></div>
-                                                                                        <span>{t("HeaderWorkHistory")}</span>
-                                                                                        <div className="heading-date">{t("DateWorkHistory")}</div>
-                                                                                </div>
-                                                                                <div className="resume-sub-heading">
-                                                                                        <span>{t("LocationWorkHistory")}</span>
-                                                                                </div>
-                                                                                <div className="resume-heading-description">
-                                                                                        <span></span>
+                                                                                <div className="experience-description">
+                                                                                        <a href={e.workHistoryLink}>{t("Address")} : {e.workHistoryTitle}</a>
                                                                                 </div>
                                                                         </div>
-                                                                        <div className="resume-sub-heading">
-                                                                                <span className="">
-                                                                                        {t("JobPosition")}
-                                                                                </span>
-                                                                        </div>
-                                                                        <div className="experience-description">
-                                                                                <a href={t("linkWorkHistory")}>{t("HeaderWorkHistory")}</a>
-                                                                        </div>
-                                                                </div>
+                                                                })}
                                                         </div>
                                                 </div>
                                                 <div className={toggleState === 3 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className={LocaleCookie === "en" ? "resume-screen-container programming-skills-container" : "fa-resume-screen-container programming-skills-container"}>
-                                                                <div className="skill-parent">
-                                                                        <span>JavaScript</span>
-                                                                        <div className="skill-percentage">
-                                                                                <div className="active-percentage-bar" style={{ width: "85%" }}>
+                                                                {programmingSkillsresume.map((e) => {
+                                                                        const size = e.programmingSkillsNumber
+                                                                        return <div key={e.id} className="skill-parent">
+                                                                                <span>{e.programmingSkillsTitle}</span>
+                                                                                <div className="skill-percentage">
+                                                                                        <div className="active-percentage-bar" style={{ 'width': `${size}%` }} >
+                                                                                        </div>
                                                                                 </div>
                                                                         </div>
-                                                                </div>
-                                                                <div className="skill-parent">
-                                                                        <span>React JS</span>
-                                                                        <div className="skill-percentage">
-                                                                                <div className="active-percentage-bar" style={{ width: "80%" }}>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="skill-parent">
-                                                                        <span>React Native</span>
-                                                                        <div className="skill-percentage">
-                                                                                <div className="active-percentage-bar" style={{ width: "65%" }}>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="skill-parent">
-                                                                        <span>Express JS</span>
-                                                                        <div className="skill-percentage">
-                                                                                <div className="active-percentage-bar" style={{ width: "45%" }}>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="skill-parent">
-                                                                        <span>Mongo Db</span>
-                                                                        <div className="skill-percentage">
-                                                                                <div className="active-percentage-bar" style={{ width: "95%" }}>
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="skill-parent">
-
-                                                                        <span>Node JS</span>
-                                                                        <div className="skill-percentage">
-                                                                                <div className="active-percentage-bar" style={{ width: "55%" }}>
-
-                                                                                </div>
-                                                                        </div>
-                                                                </div>
+                                                                })}
                                                         </div>
                                                 </div>
                                                 <div className={toggleState === 4 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className="resume-screen-container">
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <span>{t("ProjectsTitle")}</span>
-                                                                                <div className="heading-date">{t("ProjectsDate")}</div>
+                                                        <div className="resume-screen-container-project">
+                                                                {resumeProject.map((e) => {
+                                                                        return <div className="resume-heading" key={e.id}>
+                                                                                <div className="resume-main-heading">
+                                                                                        <span>{e.projectTitle}</span>
+                                                                                        <div className="heading-date">{e.projectsData}</div>
+                                                                                </div>
+                                                                                <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
+                                                                                        <span>{t("Technology")} : {e.projectsTochnologies}</span>
+                                                                                </div>
+                                                                                <div className="resume-heading-description">
+                                                                                        <span>{t("Summary")} : {e.projectsSummery}</span>
+                                                                                </div>
+                                                                                <div className="experience-description">
+                                                                                        <a href={e.projectsLink}>{t("Address")} : {e.projectTitle}</a>
+                                                                                </div>
                                                                         </div>
-                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
-                                                                                <span>{t("ProjectsSkills")}</span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span>{t("ProjectsMain")}</span>
-                                                                        </div>
-                                                                        <div className="experience-description">
-                                                                                <a href={t("Projectslink")}>{t("ProjectsTitle")}</a>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <span>{t("ProjectsTitle")}</span>
-                                                                                <div className="heading-date">{t("ProjectsDate")}</div>
-                                                                        </div>
-                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
-                                                                                <span>{t("ProjectsSkills")}</span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span>{t("ProjectsMain")}</span>
-                                                                        </div>
-                                                                        <div className="experience-description">
-                                                                                <a href={t("Projectslink")}>{t("ProjectsTitle")}</a>
-                                                                        </div>
-                                                                </div>
-                                                                <div className="resume-heading">
-                                                                        <div className="resume-main-heading">
-                                                                                <span>{t("ProjectsTitle")}</span>
-                                                                                <div className="heading-date">{t("ProjectsDate")}</div>
-                                                                        </div>
-                                                                        <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
-                                                                                <span>{t("ProjectsSkills")}</span>
-                                                                        </div>
-                                                                        <div className="resume-heading-description">
-                                                                                <span>{t("ProjectsMain")}</span>
-                                                                        </div>
-                                                                        <div className="experience-description">
-                                                                                <a href={t("Projectslink")}>{t("ProjectsTitle")}</a>
-                                                                        </div>
-                                                                </div>
+                                                                })}
                                                         </div>
                                                 </div>
                                         </div>
                                 </div>
                         </div>
-                </div>
+                </div >
         )
 }
 

@@ -100,13 +100,13 @@ export default function ContantMe() {
                                         <form ref={form} onSubmit={handleSubmit}>
                                                 <p></p>
                                                 <label htmlFor="name">Name</label>
-                                                <input type="text" name="user_name" value={values.user_name} onChange={handleChange} />
+                                                <input id="name" type="text" name="user_name" value={values.user_name} onChange={handleChange} />
                                                 {errors.user_name && <p className="error">{errors.user_name}</p>}
                                                 <label htmlFor="email">Email</label>
-                                                <input type="email" name="user_email" value={values.user_email} onChange={handleChange} />
+                                                <input id="email" name="user_email" type="email" value={values.user_email} onChange={handleChange} />
                                                 {errors.user_email && <p className="error">{errors.user_email}</p>}
                                                 <label htmlFor="message">Message</label>
-                                                <textarea type="text" name="message" value={values.message} onChange={handleChange} />
+                                                <textarea type="text" id="message" name="message" value={values.message} onChange={handleChange} />
                                                 {errors.message && <p className="error">{errors.message}</p>}
                                                 <div className="send-btn"><button type="submit">send<Image src={PaperPlane} alt="PaperPlane" /></button></div>
                                         </form>

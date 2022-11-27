@@ -36,5 +36,10 @@
         "Projectslink":"https://www.haftohasht.studio/",
         "whyContactMe":"Lets Keep In Touch",
         "LanguageEn":"English",
-        "LanguageFa":"Iran"
+        "LanguageFa":"Iran",
+        "Location":"Location",
+        "Address":"Address",
+        "Technology":"Technology",
+        "Summary":"Summary"
+
 }

@@ -35,5 +35,10 @@
         "Projectslink":"https://www.haftohasht.studio/",
         "whyContactMe":"بیایید در تماس باشیم",
         "LanguageEn":"انگلیسی",
-        "LanguageFa":"فارسی"
+        "LanguageFa":"فارسی",
+        "Location":"مکان",
+        "Address":"ادرس",
+        "Technology":"تکنولوژی",
+        "Summary":"خلاصه"
+
 }
