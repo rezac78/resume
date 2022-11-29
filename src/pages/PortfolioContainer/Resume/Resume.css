@@ -139,14 +139,44 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  height: 140px;
+  width: 100%;
+}
+.resume-screen-container-workHistory{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: 360px;
   width: 100%;
+}
+.fa-resume-screen-container-workHistory{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 300px;
+  width: 100%;
+  direction:ltr;
+}
+.resume-screen-container-project{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 360px;
+  width: 100%;
+}
+.fa-resume-screen-container-project{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 140px;
+  width: 100%;
+  direction:ltr;
 }
 .fa-resume-screen-container{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 360px;
+  height: 140px;
   width: 100%;
   direction:ltr;
 }
