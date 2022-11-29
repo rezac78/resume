@@ -34,7 +34,7 @@ export default function AboutMe({ samaritan, highlights, aboutImage }) {
                                                         <div className="highlight-heading">
                                                                 <span>{t("HeaderHighlights")}</span>
                                                         </div>
-                                                        {highlights.map((e, key) => {
+                                                        {highlights?.map((e, key) => {
                                                                 return <div className="highlight" key={key}>
                                                                         <div className="highlight-blob"></div>
                                                                         <span>{e}</span>

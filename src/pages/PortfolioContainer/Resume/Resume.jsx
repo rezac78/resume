@@ -62,7 +62,7 @@ export default function Resume({ resumeEducation, resumeWorkHistorie, programmin
                                         </div>
                                         <div className={LocaleCookie === "en" ? "resume-bullet-details" : "fa-resume-bullet-details"}>
                                                 <div className={toggleState === 1 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        {resumeEducation.map((e) => {
+                                                        {resumeEducation?.map((e) => {
                                                                 return <div key={e.id} className="resume-screen-container">
                                                                         <div className="resume-heading">
                                                                                 <div className="resume-main-heading">
@@ -86,7 +86,7 @@ export default function Resume({ resumeEducation, resumeWorkHistorie, programmin
                                                 </div>
                                                 <div className={toggleState === 2 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className={LocaleCookie === "en" ? "resume-screen-container-workHistory" : "fa-resume-screen-container-workHistory"}>
-                                                                {resumeWorkHistorie.map((e) => {
+                                                                {resumeWorkHistorie?.map((e) => {
                                                                         return <div className="experience-container" key={e.id}>
                                                                                 <div className="resume-heading">
                                                                                         <div className="resume-main-heading">
@@ -115,7 +115,7 @@ export default function Resume({ resumeEducation, resumeWorkHistorie, programmin
                                                 </div>
                                                 <div className={toggleState === 3 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className={LocaleCookie === "en" ? "resume-screen-container programming-skills-container" : "fa-resume-screen-container programming-skills-container"}>
-                                                                {programmingSkillsresume.map((e) => {
+                                                                {programmingSkillsresume?.map((e) => {
                                                                         const size = e.programmingSkillsNumber
                                                                         return <div key={e.id} className="skill-parent">
                                                                                 <span>{e.programmingSkillsTitle}</span>
@@ -129,7 +129,7 @@ export default function Resume({ resumeEducation, resumeWorkHistorie, programmin
                                                 </div>
                                                 <div className={toggleState === 4 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className="resume-screen-container-project">
-                                                                {resumeProject.map((e) => {
+                                                                {resumeProject?.map((e) => {
                                                                         return <div className="resume-heading" key={e.id}>
                                                                                 <div className="resume-main-heading">
                                                                                         <span>{e.projectTitle}</span>

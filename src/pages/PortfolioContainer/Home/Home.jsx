@@ -7,7 +7,7 @@ const Home = ({ Profiles }) => {
   return (
     <div className="home-container">
       <Header />
-      {Profiles.map((profile) => {
+      {Profiles?.map((profile) => {
         return <Profile key={profile.id} Titel={profile.littleSamaritan} ProfileImg={profile.profileImage.url} Resume={profile.resumepdfEn.url} />
       })}
       <Footer />

@@ -21,7 +21,7 @@ export default function App({
   return (
     <div className="App" dir={dir}>
       <Home Profiles={resumeProfiles} />
-      {resumeAboute.map((About) => {
+      {resumeAboute?.map((About) => {
         return (
           <AboutMe
             key={About.id}
