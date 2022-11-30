@@ -18,9 +18,9 @@ export default function Header() {
         const [activeId, setActiveId] = useState(1)
         const values = [
                 { id: 1, name: "Home", Link: "#" },
-                { id: 2, name: "AboutMe", Link: "#" },
-                { id: 3, name: "Resume", Link: "#" },
-                { id: 4, name: "ContactMe", Link: "#" }
+                { id: 2, name: "AboutMe", Link: "#AboutMe" },
+                { id: 3, name: "Resume", Link: "#Resume" },
+                { id: 4, name: "ContactMe", Link: "#ContactMe" }
         ];
         return (
                 <div className="navbar">
