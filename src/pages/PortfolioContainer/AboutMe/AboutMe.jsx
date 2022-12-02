@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from "next-i18next";
-import { highlights } from "../../events/events"
+import { highlights } from "../../../events/events"
 import Aos from "aos";
 import "aos/dist/aos.css";
 export default function AboutMe() {

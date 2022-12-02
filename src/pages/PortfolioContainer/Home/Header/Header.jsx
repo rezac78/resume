@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from "next-i18next";
 import Image from 'next/image';
 import Link from 'next/link';
-import {values} from "../../../events/events"
+import {values} from "../../../../events/events"
 import { useRouter } from 'next/router';
 import MenuOpen from "../../../../pages/assets/Home/menu.png"
 import MenuClose from "../../../../pages/assets/Home/close.png"
