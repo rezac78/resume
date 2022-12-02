@@ -24,7 +24,7 @@
         margin-left: -15px;
 }
 .icon-Group{
-        margin-left: -25px;
+        margin-left: -15px;
 }
 .error{
         text-align: center;
@@ -36,6 +36,7 @@
 .title p{
         margin-top: 0;
         margin-bottom: 1rem; 
+        margin-left: 5px;
 }
 .col img{
         color: #007bff;
@@ -117,7 +118,7 @@ form input:focus {
         border: 2px solid rgba(30, 85, 250, 0.47);
         background-color: #fff;
 }
-form button{
+form .buttonactive{
         margin-top: 15px;
         padding: 5px;
         outline: none;
@@ -127,6 +128,21 @@ form button{
         font-size: 12px;
         border-radius: 19px;
         background-color: #1f2235;
+        font-size: 18px;
+        width: 160px;
+        align-items: center;
+        justify-content: center;  
+}
+form .buttondeactive{
+        margin-top: 15px;
+        padding: 5px;
+        outline: none;
+        width: 900px;
+        color: #e6e3e3;
+        border: 2px solid #D13400;
+        font-size: 12px;
+        border-radius: 19px;
+        background-color: #1f22357c;
         font-size: 18px;
         width: 160px;
         align-items: center;

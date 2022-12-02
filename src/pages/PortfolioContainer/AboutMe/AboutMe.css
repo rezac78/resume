@@ -60,13 +60,10 @@
 }
 .about-me-profile {
         width: 50%;
+        background-image: url("../../assets/Home/cover.svg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50%;
-}
-.about-me-profile img{
-        width:100%;
-        height: 630px;
 }
 .about-me-details{
         width: 48%;

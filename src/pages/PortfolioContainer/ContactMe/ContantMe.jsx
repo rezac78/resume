@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import { useTranslation } from "react-i18next";
 import { useFormik } from "formik";
@@ -23,13 +23,14 @@ export default function ContantMe() {
                 Aos.init({ duration: 2000 });
         }, []);
         const { t } = useTranslation();
+        const [inputVal, setInputVal] = useState(false)
         const form = useRef();
         const LocaleCookie = i18next.language;
         const onSubmit = (e, actions) => {
+                setInputVal(true);
                 api.post("api/", e);
                 emailjs.sendForm('service_pke74m6', 'template_hk0t1os', form.current, '-AohTxKTUcg7RfNbr')
                         .then((result) => {
-                                console.log(result.text);
                                 LocaleCookie === "en" ?
                                         toast.success("Successful send 👍", {
                                                 position: "top-right",
@@ -42,9 +43,9 @@ export default function ContantMe() {
                                                 closeButton: true,
                                                 closeOnClick: true,
                                         });
+                                setInputVal(false);
                                 actions.resetForm();
                         }, (error) => {
-                                console.log(error.text);
                                 toast.error(` Eror❗️❗️❗️`, {
                                         position: "top-right",
                                         closeOnClick: true,
@@ -108,7 +109,7 @@ export default function ContantMe() {
                                                 <label htmlFor="message">Message</label>
                                                 <textarea type="text" id="message" name="message" value={values.message} onChange={handleChange} />
                                                 {errors.message && <p className="error">{errors.message}</p>}
-                                                <div className="send-btn"><button type="submit">send<Image src={PaperPlane} alt="PaperPlane" /></button></div>
+                                                <div className="send-btn"><button className={inputVal === false ? "buttonactive" : "buttondeactive"} type="submit">send<Image src={PaperPlane} alt="PaperPlane" /></button></div>
                                         </form>
                                 </div>
                         </div>

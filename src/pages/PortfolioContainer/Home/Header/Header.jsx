@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from "next-i18next";
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
+import {values} from "../../../events/events"
 import { useRouter } from 'next/router';
 import MenuOpen from "../../../../pages/assets/Home/menu.png"
 import MenuClose from "../../../../pages/assets/Home/close.png"
@@ -16,12 +17,7 @@ export default function Header() {
                 setOpenMenu(!OpenMenu)
         }
         const [activeId, setActiveId] = useState(1)
-        const values = [
-                { id: 1, name: "Home", Link: "#" },
-                { id: 2, name: "AboutMe", Link: "#AboutMe" },
-                { id: 3, name: "Resume", Link: "#Resume" },
-                { id: 4, name: "ContactMe", Link: "#ContactMe" }
-        ];
+
         return (
                 <div className="navbar">
                         {
@@ -61,7 +57,7 @@ export default function Header() {
                                                         </ul>
                                                 </div>
                                                 <div onClick={handleIsOpen}>
-                                                        <Image src={MenuClose} alt="menu hamburger" className="menu-hamburger" />
+                                                        <Image src={MenuClose} alt="menu hamburger" className="menu-hamburger-close" />
                                                 </div>
 
                                         </div>
