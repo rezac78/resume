@@ -8,7 +8,7 @@ import Github from "../../../assets/Home/github.svg"
 import Linkedin from "../../../assets/Home/linkedin.svg"
 import Instagram from "../../../assets/Home/instagram.svg"
 import Phone from "../../../assets/Home/phone.png"
-export default function Profile() {
+export default function Profile({ Titel, ProfileImg, Resume }) {
         const router = useRouter();
         const { t } = useTranslation();
         const LocaleCookie = router.locale;
@@ -59,7 +59,7 @@ export default function Profile() {
                                                                 />
                                                         </h1>
                                                         <span className="profile-role-tagline">
-                                                                {t("LittleSamaritan")}
+                                                                {Titel}
                                                         </span>
                                                 </span>
                                         </div>
@@ -71,11 +71,11 @@ export default function Profile() {
                                                         </button>
                                                 </a>
                                                 {LocaleCookie === "en" ?
-                                                        <a href="RezaDalvandEn.pdf" download="RezaDalvandEn.pdf" target="_blank">
+                                                        <a href={Resume} download={Resume} target="_blank">
                                                                 <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
                                                         </a>
                                                         :
-                                                        <a href="RezaDalvandCV.pdf" download="RezaDalvandCV.pdf" target="_blank">
+                                                        <a href={Resume} download={Resume} target="_blank">
                                                                 <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
                                                         </a>
                                                 }
@@ -83,6 +83,8 @@ export default function Profile() {
                                 </div>
                                 <div className={LocaleCookie === "en" ? "profile-picture" : "fa-profile-picture"}>
                                         <div className="profile-picture-background">
+                                                {/* <Image width={100} height={100} src={profilePicture} alt="Phone" /> */}
+                                                <img src={ProfileImg} alt="ProfileImg" />
                                         </div>
                                 </div>
                         </div>

@@ -9,7 +9,7 @@ import Programming from "../../assets/Home/Programming.svg"
 import Projects from "../../assets/Home/Projects.svg"
 import Aos from "aos";
 import "aos/dist/aos.css";
-export default function Resume() {
+export default function Resume({ resumeEducation, resumeWorkHistorie, programmingSkillsresume, resumeProject }) {
         const [toggleState, setToggleState] = useState(1);
         const toggleTab = (index) => {
                 setToggleState(index);
@@ -63,16 +63,16 @@ export default function Resume() {
                                         </div>
                                         <div className={LocaleCookie === "en" ? "resume-bullet-details" : "fa-resume-bullet-details"}>
                                                 <div className={toggleState === 1 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        {Educations.map((e) => {
-                                                                return <div className="resume-screen-container-WorkHistory" key={e.id}>
+                                                        {resumeEducation?.map((e) => {
+                                                                return <div key={e.id} className="resume-screen-container-WorkHistory">
                                                                         <div className="resume-heading">
                                                                                 <div className="resume-main-heading">
-                                                                                        <span>{t(e.HeaderEducation)}</span>
-                                                                                        <div className="heading-date">{t(e.HeaderDate)}</div>
+                                                                                        <span>{e.educationTitle}</span>
+                                                                                        <div className="heading-date">{e.educationData}</div>
                                                                                 </div>
                                                                                 <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
-                                                                                        <span>{t(e.MainEducation)}</span>
-                                                                                        <div className="heading-Location">{t("Location")} : {t(e.educationLocation)}</div>
+                                                                                        <span>{e.educationStady}</span>
+                                                                                        <div className="heading-Location">{t("Location")} : {e.educationLocation}</div>
                                                                                 </div>
                                                                                 <div className="resume-heading-description">
                                                                                         <span></span>
@@ -89,17 +89,17 @@ export default function Resume() {
                                                         })}
                                                 </div>
                                                 <div className={toggleState === 2 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className={LocaleCookie === "en" ? "resume-screen-container" : "fa-resume-screen-container"}>
-                                                                {WorkHistory?.map((e) => {
+                                                        <div className={LocaleCookie === "en" ? "resume-screen-container-workHistory" : "fa-resume-screen-container-workHistory"}>
+                                                                {resumeWorkHistorie?.map((e) => {
                                                                         return <div className="experience-container" key={e.id}>
                                                                                 <div className="resume-heading">
                                                                                         <div className="resume-main-heading">
                                                                                                 <div className="heading-bullet"></div>
-                                                                                                <span>{t(e.workHistoryTitle)}</span>
-                                                                                                <div className="heading-date">{t(e.workHistoryData)}</div>
+                                                                                                <span>{e.workHistoryTitle}</span>
+                                                                                                <div className="heading-date">{e.workHistoryData}</div>
                                                                                         </div>
                                                                                         <div className="resume-sub-heading">
-                                                                                                <span>{t("Location")} : {t(e.workHistoryLocation)}</span>
+                                                                                                <span>{t("Location")} : {e.workHistoryLocation}</span>
                                                                                         </div>
                                                                                         <div className="resume-heading-description">
                                                                                                 <span></span>
@@ -107,11 +107,11 @@ export default function Resume() {
                                                                                 </div>
                                                                                 <div className="resume-sub-heading">
                                                                                         <span className="">
-                                                                                                {t(e.workHistoryPosition)}
+                                                                                                {e.workHistoryPosition}
                                                                                         </span>
                                                                                 </div>
                                                                                 <div className="experience-description">
-                                                                                        <a href={t(e.workHistoryLink)} target="_blank">{t("Address")} : {t(e.workHistoryTitle)}</a>
+                                                                                        <a href={e.workHistoryLink}>{t("Address")} : {e.workHistoryTitle}</a>
                                                                                 </div>
                                                                                 <hr
                                                                                         style={{
@@ -127,14 +127,14 @@ export default function Resume() {
                                                 <div className={toggleState === 3 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className="scroll">
                                                                 <div className={LocaleCookie === "en" ? "resume-screen-container programming-skills-container" : "fa-resume-screen-container programming-skills-container"}>
-                                                                        {Skillsresume?.map((e) => {
+                                                                        {programmingSkillsresume?.map((e) => {
                                                                                 const size = e.programmingSkillsNumber
                                                                                 return <div key={e.id} className="skill-parent">
-                                                                                        <span>{t(e.programmingSkillsTitle)}</span>
+                                                                                        <span>{e.programmingSkillsTitle}</span>
                                                                                         <div className="skill-percentage">
-                                                                                                <div className="active-percentage-bar" style={{ 'width': `${size}%` }} ></div>
+                                                                                                <div className="active-percentage-bar" style={{ 'width': `${size}%` }} >
+                                                                                                </div>
                                                                                         </div>
-
                                                                                 </div>
                                                                         })}
                                                                 </div>
@@ -143,20 +143,20 @@ export default function Resume() {
                                                 <div className={toggleState === 4 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className="scroll">
                                                                 <div className="resume-screen-container-project">
-                                                                        {projects?.map((e) => {
+                                                                        {resumeProject?.map((e) => {
                                                                                 return <div className="resume-heading" key={e.id}>
                                                                                         <div className="resume-main-heading">
-                                                                                                <span>{t(e.projectTitle)}</span>
-                                                                                                <div className="heading-date">{t(e.projectsData)}</div>
+                                                                                                <span>{e.projectTitle}</span>
+                                                                                                <div className="heading-date">{e.projectsData}</div>
                                                                                         </div>
                                                                                         <div className={LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"}>
-                                                                                                <span>{t("Technology")} : {t(e.projectsTochnologies)}</span>
+                                                                                                <span>{t("Technology")} : {e.projectsTochnologies}</span>
                                                                                         </div>
                                                                                         <div className="resume-heading-description">
-                                                                                                <span>{t("Summary")} : {t(e.projectsSummery)}</span>
+                                                                                                <span>{t("Summary")} : {e.projectsSummery}</span>
                                                                                         </div>
                                                                                         <div className="experience-description">
-                                                                                                <a href={t(e.projectsLink)} target="_blank">{t("Address")} : {t(e.projectTitle)}</a>
+                                                                                                <a href={e.projectsLink}>{t("Address")} : {e.projectTitle}</a>
                                                                                         </div>
                                                                                         <hr
                                                                                                 style={{
