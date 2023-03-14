@@ -1,25 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/api/hello": "pages/api/hello.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/en/404": "pages/en/404.html",
-  "/fa/404": "pages/fa/404.html",
-  "/en/500": "pages/en/500.html",
-  "/fa/500": "pages/fa/500.html",
-  "/en/PortfolioContainer/AboutMe/AboutMe": "pages/en/PortfolioContainer/AboutMe/AboutMe.html",
-  "/fa/PortfolioContainer/AboutMe/AboutMe": "pages/fa/PortfolioContainer/AboutMe/AboutMe.html",
-  "/en/PortfolioContainer/Home/Footer/Footer": "pages/en/PortfolioContainer/Home/Footer/Footer.html",
-  "/fa/PortfolioContainer/Home/Footer/Footer": "pages/fa/PortfolioContainer/Home/Footer/Footer.html",
-  "/en/PortfolioContainer/Home/Header/Header": "pages/en/PortfolioContainer/Home/Header/Header.html",
-  "/fa/PortfolioContainer/Home/Header/Header": "pages/fa/PortfolioContainer/Home/Header/Header.html",
-  "/en/PortfolioContainer/Home/Home": "pages/en/PortfolioContainer/Home/Home.html",
-  "/fa/PortfolioContainer/Home/Home": "pages/fa/PortfolioContainer/Home/Home.html",
-  "/en/PortfolioContainer/Home/Profile/Profile": "pages/en/PortfolioContainer/Home/Profile/Profile.html",
-  "/fa/PortfolioContainer/Home/Profile/Profile": "pages/fa/PortfolioContainer/Home/Profile/Profile.html",
-  "/en/PortfolioContainer/Resume/Resume": "pages/en/PortfolioContainer/Resume/Resume.html",
-  "/fa/PortfolioContainer/Resume/Resume": "pages/fa/PortfolioContainer/Resume/Resume.html",
-  "/en/PortfolioContainer/ContactMe/ContantMe": "pages/en/PortfolioContainer/ContactMe/ContantMe.html",
-  "/fa/PortfolioContainer/ContactMe/ContantMe": "pages/fa/PortfolioContainer/ContactMe/ContantMe.html"
+  "/": "pages/index.js"
 }

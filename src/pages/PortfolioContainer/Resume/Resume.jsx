@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from "next-i18next";
 import { useRouter } from 'next/router';
-import { Educations, WorkHistory, Skillsresume, projects } from "../../../events/events";
 import Image from 'next/image'
 import Education from "../../assets/Home/Education.svg"
 import History from "../../assets/Home/history.svg"
