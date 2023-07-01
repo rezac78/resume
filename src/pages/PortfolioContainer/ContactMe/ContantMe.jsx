@@ -89,7 +89,7 @@ export default function ContantMe({getTeam}) {
                                                         <Image src={Instagram} alt="Instagram" />
                                                 </Link>
                                                 <Link href="tel:09032802041">
-                                                        <Image src={Phone} alt="Phone" />
+                                                        <Image src={Phone} alt="Phone"/>
                                                 </Link>
                                         </div>
                                 </div>
