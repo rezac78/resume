@@ -68,6 +68,13 @@ body {
   font-family: "Poppins Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:  var(--DarkbackgroundColor);
+}
+.App{
+  background-color:  var(--DarkbackgroundColor);
+}
+.App-Dark{
+  background-color:  var(--white);
 }
 
 code {
@@ -107,9 +114,15 @@ body ::-webkit-scrollbar-thumb {
 
 .primary-btn {
   color: var(--white);
-  border: 2px solid linen;
   font-size: 12px;
+  border: 2px solid linen;
   background-color: #1f2235;
+}
+.primary-btn-Dark {
+  color: var(--white);
+  border: 2px solid var(--DarkTextColor);
+  background-color: var(--DarkbackgroundColor);
+  font-size: 12px;
 }
 
 .primary-btn:hover {
@@ -117,17 +130,31 @@ body ::-webkit-scrollbar-thumb {
   border: 2px solid #D13400;
   background-color: #1f2235;
 }
+.primary-btn-Dark:hover {
+  color: aliceblue;
+  border: 2px solid black;
+  background-color: var(--DarkbackgroundColor);
+}
 
 .highlighted-btn {
   color: var(--white);
   font-size: 12px;
   background-color: #D13400;
 }
+.highlighted-btn-Dark {
+  color: var(--DarkTextColorButton);
+  font-size: 12px;
+  background-color: var(--DarkTextColor);
+}
 .fa-highlighted-btn {
   color: var(--white);
-
   font-size: 12px;
   background-color: #D13400;
+}
+.fa-highlighted-btn-Dark {
+  color: var(--DarkTextColorButton);
+  font-size: 12px;
+  background-color: var(--DarkTextColor);
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {

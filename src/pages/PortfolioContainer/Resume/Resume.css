@@ -34,6 +34,11 @@
   height: 100%;
   width: 320px;
 }
+.resume-bullets-Dark{
+  box-shadow: 15px 0 9px -15px var(--DarkTextColor);
+  height: 100%;
+  width: 320px;
+}
 
 .resume-bullet-details {
   flex-grow: 1;
@@ -52,7 +57,21 @@
   width: 100%;
   position: relative;
 }
+.resume-card .resume-bullets-Dark .bullet-container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
 .resume-card .resume-bullets .bullet-container .bullet-icons{
+  width: 34px;
+  height: 100%;
+  z-index: 1;
+  background-color: #1f2235;
+  position: absolute;
+}
+.resume-card .resume-bullets-Dark .bullet-container .bullet-icons{
   width: 34px;
   height: 100%;
   z-index: 1;
@@ -64,7 +83,27 @@
   position: relative;
   z-index: 2;
 }
+.resume-card .resume-bullets-Dark .bullet-container .bullets-Dark{
+  width: 86%;
+  position: relative;
+  z-index: 2;
+}
+.bullets-Dark{
+  color: var(--white);
+}
 .bullets .bullet{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #1f2235;
+  height: 40px;
+  margin: 15px 0;
+  padding: 0 8px;
+  border-radius: 20px;
+  width: 30px;
+  transition: width .6s ease;
+}
+.bullets-Dark .bullet{
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -80,10 +119,35 @@
   width: 35px;
   height: 35px;
 }
+.bullets-Dark .bullet img{
+  width: 35px;
+  height: 35px;
+}
+.bullets-Dark .bullet{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #1f2235;
+  height: 40px;
+  margin: 15px 0;
+  padding: 0 8px;
+  border-radius: 20px;
+  width: 30px;
+  transition: width .6s ease;
+}
+.bullets-Dark .bullet img{
+  width: 35px;
+  height: 35px;
+}
 .selected{
   animation: phone 1s ease-in-out  infinite;
   animation-iteration-count: 2;
   color: #D13400;
+}
+.selected-Dark{
+  animation: phone 1s ease-in-out  infinite;
+  animation-iteration-count: 2;
+  color: var(--DarkTextColor);
 }
 @keyframes phone {
   0%,30%,60%,90%, 100% {
@@ -107,6 +171,19 @@
   margin: 0 0 0 30px;
 }
 .bullets .bullet .bullet-label{
+  font-size: 14px;
+  white-space: nowrap;
+  font-family: "Poppins SemiBold";
+}
+.bullets-Dark .bullet .bullet-logo{
+  height: 18px;
+  margin: 0 30px 0 0;
+}
+.bullets-Dark .bullet .fa-bullet-logo{
+  height: 18px;
+  margin: 0 0 0 30px;
+}
+.bullets-Dark .bullet .bullet-label{
   font-size: 14px;
   white-space: nowrap;
   font-family: "Poppins SemiBold";
@@ -202,6 +279,11 @@
   display: flex;
   justify-content: space-between;
 }
+.resume-main-heading-Dark{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
 .heading-bullet{
   position: absolute;
   left: -30px;
@@ -211,6 +293,15 @@
   border-radius: 50%;
   background-color: #D13400;
 }
+.heading-bullet-Dark{
+  position: absolute;
+  left: -30px;
+  height: 15px;
+  width: 15px;
+  top: 5px;
+  border-radius: 50%;
+  background-color: var(--DarkTextColor);
+}
 .heading-date{
   background-color: #D13400;
   padding: 4px 12px;
@@ -218,16 +309,36 @@
   border-radius: 14px;
   color: var(--white);
 }
+.heading-date-Dark{
+  background-color: var(--DarkTextColor);
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 14px;
+  color: var(--DarkTextColorButton);
+}
 .resume-sub-heading{
   font-size: 14px;
   font-family: "Poppins SemiBold";
   color: var(--black);
   margin: 10px 0 0;
 }
+.resume-sub-heading-Dark{
+  font-size: 14px;
+  font-family: "Poppins SemiBold";
+  color: var(--white);
+  margin: 10px 0 0;
+}
 .fa-resume-sub-heading{
   font-size: 14px;
   font-family: "Poppins SemiBold";
   color: var(--black);
+  margin: 10px 0 0;
+  text-align: right;
+}
+.fa-resume-sub-heading-Dark{
+  font-size: 14px;
+  font-family: "Poppins SemiBold";
+  color: var(--white);
   margin: 10px 0 0;
   text-align: right;
 }
@@ -265,16 +376,42 @@
   border-radius: 50%;
   background-color: #D13400;
 }
+.skill-parent-Dark {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+}
+.skill-parent-Dark .heading-bullet{
+  position: absolute;
+  left: -30px;
+  height: 15px;
+  width: 15px;
+  top: 5px;
+  border-radius: 50%;
+  background-color: #D13400;
+}
 .skill-parent span {
   font-family: "Poppins Bold";
   font-size: 16px;
   color: #D13400;
+}
+.skill-parent-Dark span {
+  font-family: "Poppins Bold";
+  font-size: 16px;
+  color: var(--white);
 }
 .skill-percentage {
   position: relative;
   height: 15px;
   width: 70%;
   background-color: #D13400;
+}
+.skill-percentage-Dark {
+  position: relative;
+  height: 15px;
+  width: 70%;
+  background-color: var(--DarkTextColor);
 }
 .active-percentage-bar{
   height: 15px;
@@ -288,12 +425,21 @@
   font-family: "Poppins SemiBold";
 }
 
+.resume-main-heading-Dark span{
+  color: var(--DarkTextColor);
+  font-size: 16px;
+  font-family: "Poppins SemiBold";
+}
+
 
 @media screen and (max-width: 1045px) {
   .resume-content .resume-card{
     display: contents;
   }
   .resume-card .resume-bullets {
+    width: auto;
+  }
+  .resume-card .resume-bullets-Dark {
     width: auto;
   }
   .resume-bullet-details {

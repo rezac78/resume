@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossOrigin="anonymous"
         />
-        <title>RezaDalvand</title>
+        <title>RezaMehrzad</title>
       </Head>
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

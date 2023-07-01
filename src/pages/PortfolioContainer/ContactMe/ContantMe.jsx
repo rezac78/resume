@@ -18,7 +18,7 @@ import Phone from "../../assets/Home/phone.png"
 import Up from "../../assets/Home/up.png"
 import PaperPlane from "../../assets/Home/email-send.png"
 
-export default function ContantMe() {
+export default function ContantMe({getTeam}) {
         useEffect(() => {
                 Aos.init({ duration: 2000 });
         }, []);
@@ -64,16 +64,16 @@ export default function ContantMe() {
         return (
                 <div data-aos="fade-up" className="main-container" id="ContactMe" style={{ "opacity": "5", "transform": "translateY(1px)" }}>
                         <div className="heading-container">
-                                <div className="screen-heading"><span>{t("ContactMe")}</span></div>
-                                <div className="screen-sub-heading"><span>{t("whyContactMe")}</span></div>
+                                <div className={getTeam ? "screen-heading-Dark" : "screen-heading"}><span>{t("ContactMe")}</span></div>
+                                <div className={getTeam ? "screen-sub-heading-Dark" : "screen-sub-heading"}><span>{t("whyContactMe")}</span></div>
                                 <div className="heading-seperator">
-                                        <div className="seperator-line"></div>
-                                        <div className="seperator-blob">
+                                        <div className={getTeam ? "seperator-line-Dark" : "seperator-line"}></div>
+                                        <div className={getTeam ? "seperator-blob-Dark" : "seperator-blob"}>
                                                 <div></div>
                                         </div>
                                 </div>
                         </div>
-                        <div className="central-form">
+                        <div className={getTeam ? "central-form-Dark" : "central-form"}>
                                 <div className="col">
                                         <h2 className="title">
                                                 <p className="styles_typicalWrapper__1_Uvh">Get In Touch 📧</p>
@@ -109,14 +109,14 @@ export default function ContantMe() {
                                                 <label htmlFor="message">Message</label>
                                                 <textarea type="text" id="message" name="message" value={values.message} onChange={handleChange} />
                                                 {errors.message && <p className="error">{errors.message}</p>}
-                                                <div className="send-btn"><button className={inputVal === false ? "buttonactive" : "buttondeactive"} type="submit">send<Image src={PaperPlane} alt="PaperPlane" /></button></div>
+                                                <div className="send-btn"><button className={`${inputVal === false ? "buttonactive" : "buttondeactive"} ${getTeam ? "buttonactive-Dark" : "buttonactive" }`} type="submit">send<Image src={PaperPlane} alt="PaperPlane" /></button></div>
                                         </form>
                                 </div>
                         </div>
                         <div className="scroll-container">
                                 <button onClick={() => {
                                         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-                                }} className="btn-scroll"><Image className="fa-arrow-up" src={Up} alt="Up" /></button>
+                                }} className={getTeam ? "btn-scroll-Dark" : "btn-scroll"}><Image className="fa-arrow-up" src={Up} alt="Up" /></button>
                         </div>
                         <ToastContainer />
                 </div>

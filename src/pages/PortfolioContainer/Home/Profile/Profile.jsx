@@ -8,7 +8,7 @@ import Github from "../../../assets/Home/github.svg"
 import Linkedin from "../../../assets/Home/linkedin.svg"
 import Instagram from "../../../assets/Home/instagram.svg"
 import Phone from "../../../assets/Home/phone.png"
-export default function Profile({ Titel, ProfileImg, Resume }) {
+export default function Profile({ Titel, ProfileImg, Resume, getTeam }) {
         const router = useRouter();
         const { t } = useTranslation();
         const LocaleCookie = router.locale;
@@ -35,28 +35,30 @@ export default function Profile({ Titel, ProfileImg, Resume }) {
                                         <div className="profile-details-name">
                                                 <span className="primary-text">
                                                         {" "}
-                                                        {t("Welcome")}<span className="highlighted-text"> {t("Name")}</span>
+                                                        {t("Welcome")}<span className={getTeam ? "highlighted-text-Dark" : "highlighted-text"}> {t("Name")}</span>
                                                 </span>
                                         </div>
                                         <div className="profile-details-role">
                                                 <span className="primary-text">
                                                         {" "}
                                                         <h1 className={LocaleCookie === "en" ? "Typewriter" : "fa-Typewriter"}>
-                                                                {" "}
-                                                                <Typewriter
-                                                                        loop={Infinity}
-                                                                        words={[
-                                                                                "Full stack Developer 🖥️",
-                                                                                "MERN Stack Dev 😎️",
-                                                                                "Softwere Enginner 💻️",
-                                                                                "React/Next/Node/Nest 🔴️",
-                                                                        ]}
-                                                                        cursor
-                                                                        cursorStyle='_'
-                                                                        typeSpeed={70}
-                                                                        deleteSpeed={50}
-                                                                        delaySpeed={1000}
-                                                                />
+                                                                <div className={getTeam ? "Typewriter-Dark" : "Typewriter"}>
+                                                                        {" "}
+                                                                        <Typewriter
+                                                                                loop={Infinity}
+                                                                                words={[
+                                                                                        "Full stack Developer 🖥️",
+                                                                                        "MERN Stack Dev 😎️",
+                                                                                        "Softwere Enginner 💻️",
+                                                                                        "React/Next/Node/Nest 🔴️",
+                                                                                ]}
+                                                                                cursor
+                                                                                cursorStyle='_'
+                                                                                typeSpeed={70}
+                                                                                deleteSpeed={50}
+                                                                                delaySpeed={1000}
+                                                                        />
+                                                                </div>
                                                         </h1>
                                                         <span className="profile-role-tagline">
                                                                 {Titel}
@@ -65,25 +67,24 @@ export default function Profile({ Titel, ProfileImg, Resume }) {
                                         </div>
                                         <div className="profile-options">
                                                 <a href="#ContactMe">
-                                                        <button className="btn primary-btn">
+                                                        <button className={getTeam ? "btn primary-btn-Dark" : "btn primary-btn"}>
                                                                 {""}
                                                                 {t("ContactMe")} {" "}
                                                         </button>
                                                 </a>
                                                 {LocaleCookie === "en" ?
                                                         <a href={Resume} download={Resume} target="_blank">
-                                                                <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
+                                                                <button className={`btn ${LocaleCookie === "en" ? "highlighted-btn" : "fa-highlighted-btn"} ${getTeam ? "highlighted-btn-Dark" : "highlighted-btn"}`}> {t("GetResume")}</button>
                                                         </a>
                                                         :
                                                         <a href={Resume} download={Resume} target="_blank">
-                                                                <button className={LocaleCookie === "en" ? "btn highlighted-btn" : "btn fa-highlighted-btn"}> {t("GetResume")}</button>
+                                                                <button className={`btn ${LocaleCookie === "en" ? "highlighted-btn" : "fa-highlighted-btn"} ${getTeam ? "fa-highlighted-btn-Dark" : "fa-highlighted-btn"}`}> {t("GetResume")}</button>
                                                         </a>
                                                 }
                                         </div>
                                 </div>
                                 <div className={LocaleCookie === "en" ? "profile-picture" : "fa-profile-picture"}>
                                         <div className="profile-picture-background">
-                                                {/* <Image width={100} height={100} src={profilePicture} alt="Phone" /> */}
                                                 <img src={ProfileImg} alt="ProfileImg" />
                                         </div>
                                 </div>

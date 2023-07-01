@@ -6,6 +6,7 @@ import Resume from "./PortfolioContainer/Resume/Resume";
 import ContantMe from "./PortfolioContainer/ContactMe/ContantMe";
 import Home from "./PortfolioContainer/Home/Home";
 import i18nConfig from "../../i18n";
+import { useState } from "react";
 
 export default function App({
   resumeProfiles,
@@ -18,16 +19,20 @@ export default function App({
   const router = useRouter();
   const LocaleCookie = router.locale;
   const dir = LocaleCookie === "en" ? "ltr" : "rtl";
+  const [getTeam, setTeam] = useState(false);
+
   return (
-    <div className="App" dir={dir}>
-      <Home Profiles={resumeProfiles} />
+    <div className={getTeam ?"App" : "App-Dark"} dir={dir}>
+      <Home getTeam={getTeam} setTeam={setTeam} Profiles={resumeProfiles} />
       {resumeAboute?.map((About) => {
         return (
           <AboutMe
             key={About.id}
+            getTeam={getTeam}
             samaritan={About.samaritan}
             highlights={About.highlights}
             aboutImage={About.aboutImage.url}
+            Profiles={resumeProfiles}
           />
         );
       })}
@@ -37,8 +42,9 @@ export default function App({
         resumeWorkHistorie={resumeWorkHistorie}
         programmingSkillsresume={programmingSkillsresume}
         resumeProject={resumeProject}
+        getTeam={getTeam}
       />
-      <ContantMe />
+      <ContantMe getTeam={getTeam} />
     </div>
   );
 }

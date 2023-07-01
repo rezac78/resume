@@ -3,14 +3,14 @@ import Header from '../Home/Header/Header.jsx';
 import Profile from '../Home/Profile/Profile.jsx';
 import Footer from '../Home/Footer/Footer.jsx';
 
-const Home = ({Profiles}) => {
+const Home = ({Profiles, setTeam, getTeam}) => {
   return (
-    <div className="home-container">
-      <Header />
+    <div className={getTeam ? "home-container-Dark" : "home-container"}>
+      <Header setTeam={setTeam} getTeam={getTeam} />
       {Profiles?.map((profile) => {
-        return <Profile key={profile.id} Titel={profile.littleSamaritan} ProfileImg={profile.profileImage.url} Resume={profile.resumepdfEn.url} />
+        return <Profile getTeam={getTeam} key={profile.id} Titel={profile.littleSamaritan} ProfileImg={profile.profileImage.url} Resume={profile.resumepdfEn.url} />
       })}
-      <Footer />
+      <Footer getTeam={getTeam} />
     </div>
   )
 }

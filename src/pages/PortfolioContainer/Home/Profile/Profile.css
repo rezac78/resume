@@ -30,6 +30,9 @@
 .highlighted-text{
         color: var(--dark-orange);
 }
+.highlighted-text-Dark{
+        color: var(--DarkTextColor);
+}
 .profile-role-tagline{
         font-size:19px;
         margin:5px 0 0 0;
@@ -74,6 +77,11 @@
 .Typewriter{
         direction: ltr;
         width:auto;
+}
+.Typewriter-Dark{
+        direction: ltr;
+        width:auto;
+        color:var(--DarkTextColor);
 }
 .fa-Typewriter{
         direction: ltr;

@@ -30,6 +30,9 @@
         background: white;
         border-radius: 50%;
 }
+.dropdown {
+        margin: 0 0 0 -50px;
+}
 .dropdown .btn{
         padding: 0;
 }
@@ -51,6 +54,10 @@
         color: #ed3c57;
         font-weight: 600;
 }
+.navbar .nav-links ul li.active .Dark a{
+        color: var(--DarkTextColor);
+        font-weight: 600;
+}
 .navbar .nav-links-PC ul{
         text-decoration: none;
         list-style: none;
@@ -64,6 +71,21 @@
 .navbar .nav-links-PC ul li.active a{
         color: #ed3c57;
         font-weight: 600;
+}
+
+.navbar .nav-links-PC ul li.active .Dark a{
+        color: var(--DarkTextColor);
+        font-weight: 600;
+}
+
+.ChooseTeam{
+        margin: -10px 0 0 -85px;
+}
+.ChooseTeam .ligthImag{
+        position: relative;
+        margin-top: -90%;
+        margin-left: -25%;
+        margin-right: 25%;
 }
 
 .navbar .menu-hamburger {
@@ -117,6 +139,17 @@
         }
         .dropdown_style{
                 margin: 0;
+        }
+        .dropdown {
+                margin: 0 0 0 0px;
+        }
+        .ChooseTeam{
+                margin: 0px 0 0 0px;
+        }
+        .ChooseTeam .ligthImag{
+                position: relative;
+                margin-top: -130%;
+                margin-right: 25%;
         }
 }
 @media screen and (max-width: 920px){

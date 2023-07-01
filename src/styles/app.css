@@ -16,7 +16,12 @@
   --toast-error: #e44f4ffa;
   --toast-shadow:  #9c9c9ce3;
   --toast-success: #0CBFAE;
-  --loader-color: #0CBFAE
+  --loader-color: #0CBFAE;
+  /* team Dark */
+  --DarkbackgroundColor: #1C2027;
+  --DarkTextColor: #4CD5AE;
+  --DarkTextColorButton: #060606;
+  --DarkBorderSolid: #383838;
 }
 
 .Hidden{
