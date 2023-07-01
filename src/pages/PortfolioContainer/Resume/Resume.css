@@ -230,14 +230,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 360px;
+  height: auto;
   width: 100%;
 }
 .fa-resume-screen-container-workHistory{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 300px;
+  height: auto;
   width: 100%;
   direction:ltr;
 }
@@ -272,12 +272,12 @@
   display: flex;
   flex-direction: column;
   margin-top:10px;
-
 }
 .resume-main-heading{
   position: relative;
   display: flex;
   justify-content: space-between;
+  color: red;
 }
 .resume-main-heading-Dark{
   position: relative;
@@ -345,6 +345,11 @@
 .resume-heading-description{
   font-size: 12px;
   text-align: justify;
+}
+.resume-heading-description-Dark{
+  font-size: 12px;
+  text-align: justify;
+  color: white;
 }
 .experience-description{
   max-width: 100%;

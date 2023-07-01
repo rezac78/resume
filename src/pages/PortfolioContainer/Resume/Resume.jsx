@@ -95,45 +95,48 @@ export default function Resume({ resumeEducation, getTeam, resumeWorkHistorie, p
                                                         })}
                                                 </div>
                                                 <div className={toggleState === 2 ? "resume-details-carousal" : "selected-bullet-contact"}>
-                                                        <div className={LocaleCookie === "en" ? "resume-screen-container-workHistory" : "fa-resume-screen-container-workHistory"}>
-                                                                {resumeWorkHistorie?.map((e) => {
-                                                                        return <div className="experience-container" key={e.id}>
-                                                                                <div className="resume-heading">
+                                                        <div className="scroll">
+                                                                <div className={LocaleCookie === "en" ? "resume-screen-container-workHistory" : "fa-resume-screen-container-workHistory"}>
+                                                                        {resumeWorkHistorie?.map((e) => {
+                                                                                return <div className="experience-container" key={e.id}>
+                                                                                        <div className="resume-heading">
+                                                                                                <div className={getTeam ? "resume-main-heading-Dark" : "resume-main-heading"}>
+                                                                                                        <div className={getTeam ? "heading-bullet-Dark" : "heading-bullet"}></div>
+                                                                                                        <span>{e.workHistoryTitle}</span>
+                                                                                                        <div className={getTeam ? "heading-date-Dark" : "heading-date"}>{e.workHistoryData}</div>
+                                                                                                </div>
+                                                                                                <div className={getTeam ? "resume-sub-heading-Dark" : "resume-sub-heading"}>
+                                                                                                        <span>{t("Location")} : {e.workHistoryLocation}</span>
+                                                                                                </div>
+                                                                                                <div className="resume-heading-description">
+                                                                                                        <span></span>
+                                                                                                </div>
+                                                                                        </div>
                                                                                         <div className={getTeam ? "resume-main-heading-Dark" : "resume-main-heading"}>
-                                                                                                <div className={getTeam ? "heading-bullet-Dark" : "heading-bullet"}></div>
-                                                                                                <span>{e.workHistoryTitle}</span>
-                                                                                                <div className={getTeam ? "heading-date-Dark" : "heading-date"}>{e.workHistoryData}</div>
+                                                                                                <span className="">
+                                                                                                        {e.workHistoryPosition}
+                                                                                                </span>
                                                                                         </div>
-                                                                                        <div className={getTeam ? "resume-sub-heading-Dark" : "resume-sub-heading"}>
-                                                                                                <span>{t("Location")} : {e.workHistoryLocation}</span>
+                                                                                        <div className="experience-description">
+                                                                                                <a href={e.workHistoryLink}>{t("Address")} : {e.workHistoryTitle}</a>
                                                                                         </div>
-                                                                                        <div className="resume-heading-description">
-                                                                                                <span></span>
-                                                                                        </div>
+                                                                                        <hr
+                                                                                                style={getTeam ? {
+                                                                                                        color: `var(--DarkTextColor)`,
+                                                                                                        backgroundColor: `var(--DarkTextColor)`,
+                                                                                                        height: 1
+                                                                                                } : {
+                                                                                                        color: "#D13400",
+                                                                                                        backgroundColor: "#D13400",
+                                                                                                        height: 1
+                                                                                                }
+                                                                                                }
+                                                                                        />
                                                                                 </div>
-                                                                                <div className={getTeam ? "resume-main-heading-Dark" : "resume-main-heading"}>
-                                                                                        <span className="">
-                                                                                                {e.workHistoryPosition}
-                                                                                        </span>
-                                                                                </div>
-                                                                                <div className="experience-description">
-                                                                                        <a href={e.workHistoryLink}>{t("Address")} : {e.workHistoryTitle}</a>
-                                                                                </div>
-                                                                                <hr
-                                                                                        style={getTeam ? {
-                                                                                                color: `var(--DarkTextColor)`,
-                                                                                                backgroundColor: `var(--DarkTextColor)`,
-                                                                                                height: 1
-                                                                                        } : {
-                                                                                                color: "#D13400",
-                                                                                                backgroundColor: "#D13400",
-                                                                                                height: 1
-                                                                                        }
-                                                                                        }
-                                                                                />
-                                                                        </div>
-                                                                })}
+                                                                        })}
+                                                                </div>
                                                         </div>
+
                                                 </div>
                                                 <div className={toggleState === 3 ? "resume-details-carousal" : "selected-bullet-contact"}>
                                                         <div className="scroll">
@@ -160,10 +163,10 @@ export default function Resume({ resumeEducation, getTeam, resumeWorkHistorie, p
                                                                                                 <span>{e.projectTitle}</span>
                                                                                                 <div className={getTeam ? "heading-date-Dark" : "heading-date"}>{e.projectsData}</div>
                                                                                         </div>
-                                                                                        <div className={`${LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"} ${getTeam ? "resume-sub-heading-Dark" : "fa-resume-sub-heading-Dark"}`}>
-                                                                                                <span>{t("Technology")} : {e.projectsTochnologies}</span>
+                                                                                        <div className={`${LocaleCookie === "en" ? "resume-sub-heading" : "fa-resume-sub-heading"} ${getTeam ? "resume-sub-heading-Dark" : "resume-sub-heading"}`}>
+                                                                                                <span className={getTeam ? "fa-resume-sub-heading-Dark" : "fa-resume-sub-heading"}>{t("Technology")} : {e.projectsTochnologies}</span>
                                                                                         </div>
-                                                                                        <div className="resume-heading-description">
+                                                                                        <div className={getTeam ? "resume-heading-description-Dark" :"resume-heading-description"}>
                                                                                                 <span>{t("Summary")} : {e.projectsSummery}</span>
                                                                                         </div>
                                                                                         <div className="experience-description">
