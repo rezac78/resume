@@ -12,7 +12,7 @@
     "@apollo/client": "^3.7.10",
     "@emailjs/browser": "^3.10.0",
     "aos": "^2.3.4",
-    "axios": "^1.2.0",
+    "axios": "^1.6.3",
     "bootstrap": "^5.2.3",
     "emailjs-com": "^3.2.0",
     "eslint": "8.28.0",
